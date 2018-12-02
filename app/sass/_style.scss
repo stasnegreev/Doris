@@ -1,0 +1,85 @@
+@import "settings";
+
+// подключение стилей сгенерированного sprite.min
+// .icon {display: inline-block;}
+// @import '../css/sprite.min';
+
+// fonts
+$Arial: 'Arial', sans-serif;
+
+// типографика
+// @include font-type($color, $font-family, $font-size, $font-weight, $line-height, $letter-spacing)
+// @include font-type($color-text-dark, $Arial, 14px, 400, normal, normal);
+
+// RESPONSIVE - Bootstrap sizes
+// @include respond-to(lg) { background: orange; };
+// @include respond-to(md) { background: green; };
+// @include respond-to(sm) { background: blue; };
+// @include respond-to(xs) { background: yellow; };
+// @include respond-to(mb) { background: black; };
+// @include respond-to(mobile) { background: red; };
+
+//colors
+$white: #FFFFFF;
+$black: #000000;
+$black_opacity: rgba(0, 0, 0, 0.3);
+$yellow: #FEE31A;
+$red: #FF0000;
+$blue: #0000FF;
+
+// colors project
+$colorbg_brand: $yellow;
+$color_bg_dark: $black;
+$color_bg_light: $white;
+$color_text_brand: $yellow;
+$color_text_dark: $black;
+$color_text_light: $white;
+$color_text_link: $blue;
+
+//gradient
+$gradient: linear-gradient(245deg, transparent 60px, $yellow);
+
+@import "animation";
+
+// COMMON
+a {
+	color: $color_text_link; text-decoration: none;
+	&:hover {text-decoration: none;}
+	&:active {}
+}
+p {margin-bottom: 10px;}
+
+// separator
+.separator {
+    width: 50%; margin: 0 auto;
+    border-bottom: 1px solid $color_text_dark;
+}
+
+// application
+.app {
+    @include font-type($color_text_dark, $Arial, 16px, 400, normal, normal);
+    min-width: 320px;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+// header
+.header {
+    display: flex;
+    background-color: darkgreen;
+
+
+}
+
+// content
+.content {
+
+}
+
+// footer
+.footer {
+
+}
+
