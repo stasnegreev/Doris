@@ -1,8 +1,8 @@
 @import "settings";
 
 // подключение стилей сгенерированного sprite.min
-// .icon {display: inline-block;}
-// @import '../css/sprite.min';
+.icon {display: inline-block;}
+@import '../css/sprite.min';
 
 // fonts
 $Arial: 'Arial', sans-serif;
@@ -28,8 +28,8 @@ $red: #FF0000;
 $blue: #0000FF;
 
 // colors project
-$colorbg_brand: $yellow;
-$color_bg_dark: $black;
+$colorbg_brand: red;
+$color_bg_dark: #43bb7b;
 $color_bg_light: $white;
 $color_text_brand: $yellow;
 $color_text_dark: $black;
@@ -64,11 +64,13 @@ p {margin-bottom: 10px;}
     padding: 0 10px;
     position: relative;
 }
-
+.icon {
+  display: inline-block;
+}
 // header
 .header {
-    display: flex;
-    background-color: darkgreen;
+
+
 
 
 }
@@ -80,6 +82,20 @@ p {margin-bottom: 10px;}
 
 // footer
 .footer {
+
+}
+
+
+.header .col {
+  height:130px; }
+.billboard .col{
+  height:560px;
+}
+.featured .col{
+  height: 100px;
+}
+.about{
+  height: 805px;
 
 }
 
