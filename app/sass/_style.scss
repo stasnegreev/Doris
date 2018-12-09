@@ -64,38 +64,105 @@ p {margin-bottom: 10px;}
     padding: 0 10px;
     position: relative;
 }
-.icon {
-  display: inline-block;
-}
+
 // header
 .header {
-
-
-
-
+  &__logo {
+    img {}
+    h1 {}
+  }
+  &__nav {
+    ul {
+      li {
+        a {}
+      }
+    }
+  }
+  &__social{
+    ul {
+      li {
+        a {}
+      }
+    }
+  }
 }
 
-// content
-.content {
-
+.billboard {
+  &__title{}
+  &__content{}
+  &__button{
+    &--iphone{
+      i {}
+      a {}
+    }
+    &--android{
+      i {}
+      a {}
+    }
+  }
 }
 
-// footer
+.featured {
+  &__campany {
+    &_list {}
+    &_item {
+      a {
+        img {}
+      }
+    }
+  }
+}
+
+.about {
+  &__title {}
+  &__content {}
+  &__list {}
+  &__item {
+    h5 {
+      .icon {}
+    }
+  }
+  &_button {
+    .icon {}
+  }
+  &__link {}
+}
+
+.features {
+  &__item {
+    i {}
+    h3 {}
+    p {}
+  }
+}
+
+.testimonials {
+  &__item {}
+  &__text {}
+  &__author--name {}
+  &__author--title {}
+  &_navigation {
+    a {
+      i {}
+    }
+  }
+}
+
+.subscription {
+  p {}
+  form {
+    .subscription__email {}
+    .subscription__button {}
+  }
+}
+
 .footer {
-
+  &__link {
+    a {
+      img {}
+    }
+    p {}
+  }
 }
 
-
-.header .col {
-  height:130px; }
-.billboard .col{
-  height:560px;
-}
-.featured .col{
-  height: 100px;
-}
-.about{
-  height: 805px;
-
-}
 
