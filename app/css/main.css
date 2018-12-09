@@ -201,21 +201,6 @@ p {
   padding: 0 10px;
   position: relative; }
 
-.icon {
-  display: inline-block; }
-
-.header .col {
-  height: 130px; }
-
-.billboard .col {
-  height: 560px; }
-
-.featured .col {
-  height: 100px; }
-
-.about {
-  height: 805px; }
-
 @media print {
   * {
     background: transparent !important;
