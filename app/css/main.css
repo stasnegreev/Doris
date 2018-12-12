@@ -225,6 +225,9 @@ p {
     font-family: Socialico , sans-serif;
     color: red; }
 
+.features {
+  background-color: #2b542c; }
+
 @media print {
   * {
     background: transparent !important;
