@@ -38,14 +38,13 @@
 
 		<header class="header" id="header">
 			<div class = "container" >
-				<div class="row ">
+				<div class="row align-items-center">
 					<div class="col-sm-2">
 						<div class="header__logo">
 							<img src="../img/logo.png"/>
-							<h1>Capture</h1>
 						</div>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-7">
 						<nav class="header__nav">
 							<ul>
 								<li><a href="">About</a></li>
@@ -54,7 +53,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-3">
 						<div class="header__social">
 							<ul class="header__social__list">
 								<li class="header__social__item"><a href="">F</a></li>
@@ -71,7 +70,7 @@
 			<!-- BILBOARD -->
 			<div class = "container" >
 			    <div class="row">
-			        <div class="col-sm-6" >
+			        <div class="col-sm-7" >
 			            <div >
 			                <h2 class="billboard__title">
 			                    TAKE PHOTOS LIKE A PRO.
@@ -80,10 +79,10 @@
 			                    Whit only your iphone and capture app you can take stunning image loke a professional Phorographer.
 			                </p>
 			                <div class="billboard__button billboard__button--iphone">
-			                    <a href=""><i class="icon icon-apple"></i>Iphone APP</a>
+			                    <a href=""><i class="icon icon-apple"></i>IPHONE APP</a>
 			                </div>
-			                <div class="billboard__button billboard__buttom--android">
-			                    <a href=""><i class="icon icon-android"></i> Android APP</a>
+			                <div class="billboard__button billboard__button--android">
+			                    <a href=""><i class="icon icon-android"></i> ANDROID APP</a>
 			                </div>
 			            </div>
 			        </div>
@@ -127,7 +126,7 @@
 			<div class = "container" >
 			    <div class="row ">
 			        <div class="col-sm-6" >
-			
+			            <img class="about__iphone" src="../img/iph.png">
 			        </div>
 			        <div class="col-sm-6">
 			            <h2 class="about__title">
@@ -156,7 +155,7 @@
 			                    </h5>
 			                </li>
 			                    <h5>
-			                        <li class="about__item">
+			                        <i class="about__item"></i>
 			                        Qfmnisd prekter maslo orend.
 			                    </h5>
 			                </li>
@@ -285,12 +284,12 @@
 			                    app develope
 			                </p>
 			        </div>
-			            <div class="testimonisls__navigation">
-			                <a  href="" >
-			                    <i class="icon-arr_l"></i>
+			            <div class="testimonials__navigation">
+			                <a  href="" class="testimonials__navigation--left">
+			                    <i class="icon icon-arr_l"></i>
 			                </a>
 			                <a  href="" >
-			                    <i class="icon-arr_r"></i>
+			                    <i class="icon icon-arr_r class="testimonials__navigation--right""></i>
 			                </a>
 			            </div>
 			        </div>
@@ -306,8 +305,12 @@
 			                Join Our Liste and stay updated!
 			            </p>
 			            <form action="/sendEmail" method="POST">
-			                <input class="subscription__email" name="email-address" placeholder="Enter your email">
-			                <input class="subscription__button" type="submit" name="submit" value="">
+			                <div class="subscriptions__form">
+			                    <input class="subscription__email" name="email-address" placeholder="Enter your email">
+			                    <div class="subscription__button">
+			                        <input class=" icon icon-mail_dark" type="submit" name="submit" value="">
+			                    </div>
+			                </div>
 			            </form>
 			        </div>
 			    </div>
@@ -315,19 +318,27 @@
 		</section>
 		<footer class="footer" id="footer">
 			<div class="container">
-			    <div class="row"></div>
-			        <div class="col-sm-12">
-			            <div class="footer__link">
-			                <a href="">
-			                    <img src="../img/android.png" alt="android robot logo">
-			                </a>
-			                <a href="">
-			                    <img src="../img/apple.png" alt="apple logo">
-			                </a>
-			                <a href="">
-			                    <img src="../img/windows.png" alt="windows logo">
-			                </a>
-			            </div>
+			    <div class="row">
+			        <div class="col-sm-4">
+			        </div>
+			        <div class="col-sm-4">
+			            <ul class="footer__list">
+			                <li>
+			                    <a href="" class="footer__item" >
+			                        <img src="../img/android.png" alt="android robot logo">
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="" class="footer__item">
+			                        <img src="../img/apple.png" alt="apple logo">
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="" class="footer__item">
+			                        <img src="../img/windows.png" alt="windows logo">
+			                    </a>
+			                </li>
+			            </ul>
 			            <p class="footer__copyright">
 			                &#169 2015 Pixelhint.com. All Rights Reserved
 			            </p>

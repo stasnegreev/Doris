@@ -6,6 +6,8 @@
 
 // fonts
 $Arial: 'Arial', sans-serif;
+$OpenSans: 'Open Sans',sans-serif;
+$Socialico: 'Socialico', sans-serif;
 @font-face {
   font-family:"Socialico";
   src:url("../fonts/Socialico.eot?") format("eot"),
@@ -37,10 +39,10 @@ $blue: #0000FF;
 
 // colors project
 $colorbg_brand: red;
-$color_bg_dark: #43bb7b;
-$color_bg_light: $white;
-$color_text_brand: $yellow;
-$color_text_dark: $black;
+$color_bg_dark: #3b9e69;
+$color_bg_light: #faf9f9;
+$color_text_title: #525252;
+$color_text_dark: #6e6c6c;
 $color_text_light: $white;
 $color_text_link: $blue;
 
@@ -51,12 +53,13 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 
 // COMMON
-a {
-	color: $color_text_link; text-decoration: none;
-	&:hover {text-decoration: none;}
-	&:active {}
-}
-p {margin-bottom: 10px;}
+//a {
+//	color: $color_text_link;
+  //text-decoration: none;
+	//&:hover {text-decoration: none;}
+//	&:active {}
+//}
+//p {margin-bottom: 10px;}
 
 // separator
 .separator {
@@ -66,37 +69,48 @@ p {margin-bottom: 10px;}
 
 // application
 .app {
-    @include font-type($color_text_dark, $Arial, 16px, 400, normal, normal);
-    min-width: 320px;
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 0 10px;
-    position: relative;
-}
-a {
+    @include font-type($color_text_dark, $OpenSans, 18px, 400, normal, normal);
 
+    margin: 0 auto;
+    padding: 0 ;
+    position: relative;
+    a{
+      @include font-type($color_text_dark, $OpenSans, 18px, 400, normal, normal);
+    }
 }
+
 // header
 .header {
-  background-color: #2b542c;
+  background-color: $color_bg_dark;
   &__logo {
     img {}
     h1 {}
   }
   &__nav {
     ul {
-      li {
-        a {}
+        li {
+        display: inline-block;
+        a {
+          @include font-type($color_text_light, $OpenSans, 18px, 400, normal, normal);
+        }
       }
     }
   }
   &__social{
 
     ul {
+      display: flex;
+      justify-content: space-around;
       li {
+        display: flex;
         a {
-          font-family: Socialico , sans-serif;
-          color: red;
+          @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
+          background-color: $white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 4px 0;
+          text-align: center;
         }
       }
     }
@@ -104,23 +118,49 @@ a {
 }
 
 .billboard {
-  &__title{}
+  height: 560px;
+  background-image: url(../img/billboard.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  &__title{
+    @include font-type($color_text_dark, $OpenSans, 24px, 600, normal, normal);
+  }
   &__content{}
   &__button{
+    border: 2px solid $color_text_dark;
+    display: inline-block;
+    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
     &--iphone{
-      i {}
-      a {}
+      i {
+        margin-right: 10px;
+      }
+      a {
+        padding: 5px 10px;
+
+      }
     }
     &--android{
-      i {}
-      a {}
+      i {
+        margin-right: 10px;
+      }
+      a {
+        padding: 20px 30px;
+
+      }
     }
   }
 }
 
 .featured {
+  background-color: #f3f3f3;
+
   &__campany {
-    &_list {}
+    &_list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     &_item {
       a {
         img {}
@@ -130,7 +170,11 @@ a {
 }
 
 .about {
-  &__title {}
+  background-color: $color_bg_light;
+  &__iphone{}
+  &__title {
+    @include font-type($color_text_dark, $OpenSans, 24px, 600, normal, normal);
+  }
   &__content {}
   &__list {}
   &__item {
@@ -138,47 +182,110 @@ a {
       .icon {}
     }
   }
-  &_button {
-    .icon {}
+  &__button {
+    border: 2px solid $color_text_dark;
+    display: inline-block;
+    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
+    .icon {
+      margin-right: 15px;
+    }
+    padding: 20px 40px;
+
   }
-  &__link {}
+  &__link {
+    display: inline-block;
+    padding: 20px 40px;
+  }
 }
 
 .features {
-  background-color: #2b542c;
+  background-color: $color_bg_dark;
   &__item {
+    text-align: center;
+    padding: 0 40px;
     i {}
-    h3 {}
-    p {}
+    h3 {
+      @include font-type($color_text_light, $OpenSans, 18px, 600, normal, normal);
+    }
+    p {
+      @include font-type($color_text_light, $OpenSans, 14px, 400, normal, normal);
+    }
   }
 }
 
 .testimonials {
-  &__item {}
-  &__text {}
-  &__author--name {}
-  &__author--title {}
-  &_navigation {
+  &__item {
+    text-align: center;
+  }
+  &__text {
+
+  }
+  &__author--name {
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 20px, 600, normal, normal);
+  }
+  &__author--title {
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+  }
+  &__navigation {
+    display: flex;
+    justify-content: center;
     a {
+      margin: 0 0px;
+      padding: 0 0px;
       i {}
     }
   }
 }
 
 .subscription {
-  p {}
+  background-color: $color_bg_dark;
+  display: flex;
+  justify-content: center;
+  p {
+    text-align: center;
+    @include font-type($color_text_light, $OpenSans, 18px, 400, normal, normal);
+  }
   form {
-    .subscription__email {}
-    .subscription__button {}
+    background-color: $color_bg_light;
+    border-radius: 2px;
+    display: inline-block;
+    .subscriptions__form{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .subscription__email {
+      width-max: 308px;
+      height: 50px;
+      padding: 0px 1px 2px 3px;
+      border: none;
+      background-color: $color_bg_light;
+    }
+    .subscription__button {
+      width-max: 60px;
+      height: 50px;
+      padding: 12px 18px;
+      background-color: $color_bg_light;
+      input{
+        background-color: $color_bg_light;
+        border: none;
+      }
+    }
   }
 }
 
 .footer {
-  &__link {
-    a {
-      img {}
-    }
-    p {}
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {}
+  &__copyright {
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+    img {}
   }
 }
 
