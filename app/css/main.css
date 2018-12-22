@@ -89,8 +89,20 @@ body * {
 .icon {
   display: inline-block; }
 
+.icon-android {
+  background-position: -104px -38px;
+  width: 14px; }
+
+.icon-android, .icon-apple {
+  background-image: url(sprite.png);
+  height: 16px; }
+
+.icon-apple {
+  background-position: -11px -85px;
+  width: 12px; }
+
 .icon-arr_l {
-  background-position: -104px -57px; }
+  background-position: 0 -85px; }
 
 .icon-arr_l, .icon-arr_r {
   background-image: url(sprite.png);
@@ -98,11 +110,11 @@ body * {
   height: 19px; }
 
 .icon-arr_r {
-  background-position: -104px -38px; }
+  background-position: -104px -54px; }
 
 .icon-dialog_white {
   background-image: url(sprite.png);
-  background-position: -36px -32px;
+  background-position: -72px 0;
   width: 32px;
   height: 32px; }
 
@@ -133,7 +145,7 @@ body * {
   height: 21px; }
 
 .icon-painting_white {
-  background-position: 0 0;
+  background-position: 0 -32px;
   width: 36px; }
 
 .icon-painting_white, .icon-people_white {
@@ -151,7 +163,7 @@ body * {
   height: 17px; }
 
 .icon-printer_white {
-  background-position: 0 -32px;
+  background-position: 0 0;
   width: 36px; }
 
 .icon-printer_white, .icon-settings_white {
@@ -159,7 +171,7 @@ body * {
   height: 32px; }
 
 .icon-settings_white {
-  background-position: -72px 0;
+  background-position: -36px -32px;
   width: 32px; }
 
 .icon-videoсam {
@@ -173,6 +185,12 @@ body * {
 .icon-сamera {
   background-position: -44px -64px;
   height: 17px; }
+
+@font-face {
+  font-family: "Socialico";
+  src: url("../fonts/Socialico.eot?") format("eot"), url("../fonts/Socialico.woff") format("woff"), url("../fonts/Socialico.ttf") format("truetype"), url("../fonts/Socialico.svg#Socialico") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 a {
   color: #0000FF;
@@ -201,20 +219,14 @@ p {
   padding: 0 10px;
   position: relative; }
 
-.icon {
-  display: inline-block; }
+.header {
+  background-color: #2b542c; }
+  .header__social ul li a {
+    font-family: Socialico , sans-serif;
+    color: red; }
 
-.header .col {
-  height: 130px; }
-
-.billboard .col {
-  height: 560px; }
-
-.featured .col {
-  height: 100px; }
-
-.about {
-  height: 805px; }
+.features {
+  background-color: #2b542c; }
 
 @media print {
   * {
