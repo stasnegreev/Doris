@@ -16,7 +16,7 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
 
 	<!-- <link rel="stylesheet" href="css/libs.min.css?v=1.0"> -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css?v=1.0">
 	<link rel="stylesheet" href="css/main.min.css?v=1.0">
 
@@ -41,7 +41,7 @@
 				<div class="row align-items-center">
 					<div class="col-sm-2">
 						<div class="header__logo">
-							<img src="../img/logo.png"/>
+							<img src="/img/logo.png"/>
 						</div>
 					</div>
 					<div class="col-sm-7">
@@ -70,8 +70,9 @@
 			<!-- BILBOARD -->
 			<div class = "container" >
 			    <div class="row">
-			        <div class="col-sm-7" >
-			            <div >
+			
+			        <div class="col-sm-7">
+			            <div class="billboard__box">
 			                <h2 class="billboard__title">
 			                    TAKE PHOTOS LIKE A PRO.
 			                </h2>
@@ -126,11 +127,11 @@
 			<div class = "container" >
 			    <div class="row ">
 			        <div class="col-sm-6" >
-			            <img class="about__iphone" src="../img/iph.png">
+			            <img class="about__iphone" src="/img/iph.png">
 			        </div>
 			        <div class="col-sm-6">
 			            <h2 class="about__title">
-			                Capture unforgettable moments.
+			                CAPTURE UNFORGENTTABLE MOMENTS.
 			            </h2>
 			            <p class="about__content">
 			                Seuismod ligula ipsum vulputate hjsbvkjsfvv fdidfdj jnjkdsvs jdsvnn jdsavnjksd jdsanjksd dsjak,djnkjpvjshuer nvkksdnvks nsvonsd dsnvks jd njjksa ja d]dn   jkvdn].
@@ -153,9 +154,10 @@
 			                        <i class="icon icon-eyeball"></i>
 			                        Focuse faistit fsinft juidmxc egrtyyu.
 			                    </h5>
-			                </li>
+			                </li >
+			                <li class="about__item">
 			                    <h5>
-			                        <i class="about__item"></i>
+			                        <i class="icon icon-painting"></i>
 			                        Qfmnisd prekter maslo orend.
 			                    </h5>
 			                </li>
@@ -268,8 +270,11 @@
 			<!--testimonials-->
 			<div class = "container" >
 			    <div class="row ">
-			        <div class="col-sm-12">
-			            <div class="testimonials__item"
+			        <div class="col-sm-1">
+			
+			        </div>
+			        <div class="col-sm-10">
+			            <div class="testimonials__item">
 			                 <p class="testimonials__text">
 			                     Integer pharetra tellus varius, dictum erat vel, maximus tellus.
 			                     Their work on our website and Internet marketing has made a significant
@@ -283,15 +288,18 @@
 			                <p class="testimonials__author--title">
 			                    app develope
 			                </p>
-			        </div>
+			            </div>
 			            <div class="testimonials__navigation">
 			                <a  href="" class="testimonials__navigation--left">
 			                    <i class="icon icon-arr_l"></i>
 			                </a>
 			                <a  href="" >
-			                    <i class="icon icon-arr_r class="testimonials__navigation--right""></i>
+			                    <i class="icon icon-arr_r testimonials__navigation--right"></i>
 			                </a>
 			            </div>
+			        </div>
+			        <div class="col-sm-1">
+			
 			        </div>
 			    </div>
 			</div>
@@ -305,7 +313,7 @@
 			                Join Our Liste and stay updated!
 			            </p>
 			            <form action="/sendEmail" method="POST">
-			                <div class="subscriptions__form">
+			                <div class="subscription__form">
 			                    <input class="subscription__email" name="email-address" placeholder="Enter your email">
 			                    <div class="subscription__button">
 			                        <input class=" icon icon-mail_dark" type="submit" name="submit" value="">

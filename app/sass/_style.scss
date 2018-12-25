@@ -69,29 +69,55 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 // application
 .app {
-    @include font-type($color_text_dark, $OpenSans, 18px, 400, normal, normal);
+    @include font-type($color_text_dark, $OpenSans, 17px, 400, 26px, normal);
 
     margin: 0 auto;
     padding: 0 ;
     position: relative;
     a{
-      @include font-type($color_text_dark, $OpenSans, 18px, 400, normal, normal);
+      @include font-type($color_text_dark, $OpenSans, 16px, 400, normal, normal);
     }
+
+  @include respond-to(mb) {
+    text-align: center;
+  }
 }
 
 // header
 .header {
   background-color: $color_bg_dark;
+
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
   &__logo {
+    margin: 49px 0;
+
+    @media only screen and (max-width: 767px) {
+      margin: 49px 0 0 0;
+    }
     img {}
     h1 {}
   }
   &__nav {
+    margin: 49px 0 0 0px;
+
+    @media only screen and (max-width: 767px) {
+      margin: 20px 0 0 0px;
+    }
+
     ul {
         li {
         display: inline-block;
+        margin: 0 19px;
+
+          @media only screen and (max-width: 767px) {
+            padding: 0px 0 0 0px;
+          }
+
         a {
-          @include font-type($color_text_light, $OpenSans, 18px, 400, normal, normal);
+          @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
         }
       }
     }
@@ -100,9 +126,18 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
     ul {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-end;
+      margin: 39px 33px 0 0px;
+
+      @media only screen and (max-width: 767px) {
+        justify-content: center;
+        margin: 20px 0 39px 0px;
+      }
+
       li {
         display: flex;
+        justify-content: right;
+        padding: 10px;
         a {
           @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
           background-color: $white;
@@ -118,50 +153,80 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 }
 
 .billboard {
-  height: 560px;
+  //height: 560px;
   background-image: url(../img/billboard.jpg);
   background-size: cover;
   background-position: center center;
 
-  &__title{
-    @include font-type($color_text_dark, $OpenSans, 24px, 600, normal, normal);
+
+  @include respond-to(md) {
+    height: auto;
+
   }
-  &__content{}
+
+  &__box {
+    padding-left: 141px;
+    padding-bottom: 178px;
+
+    @include respond-to(lg) {
+      padding-left: 100px;
+    }
+    @include respond-to(md) {
+      padding-left: 60px;
+    }
+    @media only screen and (max-width: 991px) {
+      padding-left: 40px;
+    }
+    @include respond-to(xs) {
+      padding-bottom: 78px;
+    }
+  }
+
+  &__title{
+    @include font-type($color_text_dark, $OpenSans, 32px, 700, normal, 0px);
+    margin-top: 163px;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 63px;
+    }
+
+  }
+  &__content{
+    margin-top: 27px;
+  }
   &__button{
+    margin: 32px 7px 0 0;
+    width: 225px;
+    height: 60px;
     border: 2px solid $color_text_dark;
     display: inline-block;
-    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
-    &--iphone{
-      i {
-        margin-right: 10px;
-      }
-      a {
-        padding: 5px 10px;
-
-      }
+    i {
+      margin-right: 15px;
     }
-    &--android{
-      i {
-        margin-right: 10px;
-      }
-      a {
-        padding: 20px 30px;
-
-      }
+    a {
+      display: block;
+      padding: 15px 30px;
+      @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
     }
   }
 }
 
+
 .featured {
   background-color: #f3f3f3;
-
   &__campany {
     &_list {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
+      margin: 31px 0 15px 0;
     }
     &_item {
+
+      @include respond-to(xs) {
+       margin: 0 57px;
+      }
+
       a {
         img {}
       }
@@ -170,69 +235,113 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 }
 
 .about {
+  padding: 0 0 105px 0;
   background-color: $color_bg_light;
-  &__iphone{}
-  &__title {
-    @include font-type($color_text_dark, $OpenSans, 24px, 600, normal, normal);
+  &__iphone {
+    margin: 89px 132px 0px 0px;
+    float: right;
+
+    @include respond-to (sm){
+      margin: 89px 0px 0px 0px;
+      float: none;
+    }
+    @include respond-to(xs){
+      display: none;
+      height: 0;
+      width: 0;
+    }
   }
-  &__content {}
-  &__list {}
+  &__title {
+    margin-top: 92px;
+    @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
+
+  }
+  &__content {
+    margin-top: 21px;
+    @include font-type($color_text_dark, $OpenSans, 17px, 400, 31px, normal);
+
+  }
+  &__list {
+    margin-top: 50px;
+  }
   &__item {
+    margin-top: 18px;
     h5 {
-      .icon {}
+      .icon {
+        margin-right: 25px;
+      }
     }
   }
   &__button {
+    margin-top: 51px;
+    width: 262px;
+    height: 60px;
     border: 2px solid $color_text_dark;
     display: inline-block;
     @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
     .icon {
       margin-right: 15px;
     }
-    padding: 20px 40px;
+    padding: 20px 40px 0 40px;
 
   }
   &__link {
     display: inline-block;
-    padding: 20px 40px;
+    padding: 22px 34px 0 34px;
+
   }
 }
 
 .features {
   background-color: $color_bg_dark;
+  padding: 69px 0 50px 0;
   &__item {
+    /*margin-top: 100px;*/
     text-align: center;
     padding: 0 40px;
-    i {}
+    i {
+      margin-top: 29px;
+
+    }
     h3 {
+      margin-top: 40px;
       @include font-type($color_text_light, $OpenSans, 18px, 600, normal, normal);
     }
     p {
-      @include font-type($color_text_light, $OpenSans, 14px, 400, normal, normal);
+      margin: 33px 0 50px 0;
+      @include font-type($color_text_light, $OpenSans, 14px, 400, 26px, normal);
     }
   }
 }
 
 .testimonials {
+
   &__item {
-    text-align: center;
-  }
-  &__text {
+    margin-top: 89px;
+
 
   }
+  &__text {
+    margin-top: 29px;
+    @include font-type($color_text_dark, $OpenSans, 22px, 400, 36px, normal);
+    text-align: center;
+  }
   &__author--name {
+    margin-top: 30px;
     text-align: center;
     @include font-type($color_text_dark, $OpenSans, 20px, 600, normal, normal);
   }
   &__author--title {
+    margin-top: 1px;
     text-align: center;
     @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
   }
   &__navigation {
+    margin: 38px 0 96px 0;
     display: flex;
     justify-content: center;
     a {
-      margin: 0 0px;
+      margin:0 20px;
       padding: 0 0px;
       i {}
     }
@@ -241,52 +350,58 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 .subscription {
   background-color: $color_bg_dark;
-  display: flex;
-  justify-content: center;
+
   p {
+    margin-top: 94px;
     text-align: center;
-    @include font-type($color_text_light, $OpenSans, 18px, 400, normal, normal);
+    @include font-type($color_text_light, $OpenSans,20px, 400, normal, normal);
   }
-  form {
+  form{
+
+  }
+  &__form{
+    margin: 52px 0 96px;
+    display: flex;
+    justify-content: center;
+  }
+  &__email {
+    display: block;
+    padding-left: 20px;
+    width: 310px;
+    height: 50px;
+    border: none;
     background-color: $color_bg_light;
-    border-radius: 2px;
-    display: inline-block;
-    .subscriptions__form{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .subscription__email {
-      width-max: 308px;
-      height: 50px;
-      padding: 0px 1px 2px 3px;
+  }
+  &__button {
+    display: block;
+    width: 60px;
+    height: 50px;
+    padding: 12px 18px;
+    background-color: $color_bg_light;
+    input{
+      background-color: $color_bg_light;
       border: none;
-      background-color: $color_bg_light;
-    }
-    .subscription__button {
-      width-max: 60px;
-      height: 50px;
-      padding: 12px 18px;
-      background-color: $color_bg_light;
-      input{
-        background-color: $color_bg_light;
-        border: none;
-      }
     }
   }
 }
 
 .footer {
   &__list {
+    margin: 101px auto 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 250px;
   }
-  &__item {}
+  &__item {
+
+  }
   &__copyright {
+    margin: 50px 0 50px 0;
     text-align: center;
     @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
     img {}
   }
 }
+
 
 
