@@ -320,7 +320,8 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 .testimonials {
   &__box{
     text-align: center;
-    margin-top: 57px
+    margin-top: 57px;
+
   }
   &__text {
     display: inline-block;

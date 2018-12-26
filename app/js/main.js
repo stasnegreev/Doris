@@ -1,4 +1,4 @@
-// ;$(document).ready(function() {
+//:$(document).ready(function() {
 
 //   // установка года в copyrigth
 //   document.getElementById("thisyear").innerHTML = new Date().getFullYear();
@@ -24,3 +24,20 @@
 //       return false;
 //   });
 // });
+
+     $('.owl-carousel').owlCarousel({
+         loop: true,
+         margin: 10,
+         nav: true,
+         responsive: {
+             0: {
+                 items: 1
+             },
+             600: {
+                 items: 3
+             },
+             1000: {
+                 items: 5
+             }
+         }
+     })
