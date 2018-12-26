@@ -6,6 +6,8 @@
 
 // fonts
 $Arial: 'Arial', sans-serif;
+$OpenSans: 'Open Sans',sans-serif;
+$Socialico: 'Socialico', sans-serif;
 @font-face {
   font-family:"Socialico";
   src:url("../fonts/Socialico.eot?") format("eot"),
@@ -37,10 +39,10 @@ $blue: #0000FF;
 
 // colors project
 $colorbg_brand: red;
-$color_bg_dark: #43bb7b;
-$color_bg_light: $white;
-$color_text_brand: $yellow;
-$color_text_dark: $black;
+$color_bg_dark: #3b9e69;
+$color_bg_light: #faf9f9;
+$color_text_title: #525252;
+$color_text_dark: #6e6c6c;
 $color_text_light: $white;
 $color_text_link: $blue;
 
@@ -51,12 +53,13 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 
 // COMMON
-a {
-	color: $color_text_link; text-decoration: none;
-	&:hover {text-decoration: none;}
-	&:active {}
-}
-p {margin-bottom: 10px;}
+//a {
+//	color: $color_text_link;
+  //text-decoration: none;
+	//&:hover {text-decoration: none;}
+//	&:active {}
+//}
+//p {margin-bottom: 10px;}
 
 // separator
 .separator {
@@ -66,37 +69,82 @@ p {margin-bottom: 10px;}
 
 // application
 .app {
-    @include font-type($color_text_dark, $Arial, 16px, 400, normal, normal);
-    min-width: 320px;
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 0 10px;
-    position: relative;
-}
-a {
+    @include font-type($color_text_dark, $OpenSans, 17px, 400, 26px, normal);
 
+    margin: 0 auto;
+    padding: 0 ;
+    position: relative;
+    a{
+      @include font-type($color_text_dark, $OpenSans, 16px, 400, normal, normal);
+    }
+
+  @include respond-to(mb) {
+    text-align: center;
+  }
 }
+
 // header
 .header {
-  background-color: #2b542c;
+  background-color: $color_bg_dark;
+
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
   &__logo {
+    margin: 49px 0;
+
+    @media only screen and (max-width: 767px) {
+      margin: 49px 0 0 0;
+    }
     img {}
     h1 {}
   }
   &__nav {
+    margin: 49px 0 0 0px;
+
+    @media only screen and (max-width: 767px) {
+      margin: 20px 0 0 0px;
+    }
+
     ul {
-      li {
-        a {}
+        li {
+        display: inline-block;
+        margin: 0 19px;
+
+          @media only screen and (max-width: 767px) {
+            padding: 0px 0 0 0px;
+          }
+
+        a {
+          @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
+        }
       }
     }
   }
   &__social{
 
     ul {
+      display: flex;
+      justify-content: flex-end;
+      margin: 39px 33px 0 0px;
+
+      @media only screen and (max-width: 767px) {
+        justify-content: center;
+        margin: 20px 0 39px 0px;
+      }
+
       li {
+        display: flex;
+        padding: 10px;
         a {
-          font-family: Socialico , sans-serif;
-          color: red;
+          @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
+          background-color: $white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 4px 0;
+          text-align: center;
         }
       }
     }
@@ -104,24 +152,82 @@ a {
 }
 
 .billboard {
-  &__title{}
-  &__content{}
-  &__button{
-    &--iphone{
-      i {}
-      a {}
+  //height: 560px;
+  background-image: url(../img/billboard.jpg);
+  background-size: cover;
+  background-position: center center;
+
+
+  @include respond-to(md) {
+    height: auto;
+
+  }
+
+  &__box {
+    padding-left: 141px;
+    padding-bottom: 178px;
+
+    @include respond-to(lg) {
+      padding-left: 100px;
     }
-    &--android{
-      i {}
-      a {}
+    @include respond-to(md) {
+      padding-left: 60px;
+    }
+    @media only screen and (max-width: 991px) {
+      padding-left: 40px;
+    }
+    @include respond-to(xs) {
+      padding-bottom: 78px;
+    }
+  }
+
+  &__title{
+    text-transform: uppercase;
+
+    @include font-type($color_text_dark, $OpenSans, 32px, 700, normal, 0px);
+    margin-top: 163px;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 63px;
+    }
+
+  }
+  &__content{
+    margin-top: 27px;
+  }
+  &__button{
+    margin: 32px 7px 0 0;
+    width: 225px;
+    height: 60px;
+    border: 2px solid $color_text_dark;
+    display: inline-block;
+    i {
+      margin-right: 15px;
+    }
+    a {
+      display: block;
+      padding: 15px 30px;
+      @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
     }
   }
 }
 
+
 .featured {
+  background-color: #f3f3f3;
   &__campany {
-    &_list {}
+    &_list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 31px 0 15px 0;
+    }
     &_item {
+
+      @include respond-to(xs) {
+       margin: 0 57px;
+      }
+
       a {
         img {}
       }
@@ -130,56 +236,175 @@ a {
 }
 
 .about {
-  &__title {}
-  &__content {}
-  &__list {}
-  &__item {
-    h5 {
-      .icon {}
+  padding: 0 0 105px 0;
+  background-color: $color_bg_light;
+  &__iphone {
+    margin: 89px 132px 0px 0px;
+    float: right;
+
+    @include respond-to (sm){
+      margin: 89px 0px 0px 0px;
+      float: none;
+    }
+    @include respond-to(xs){
+      display: none;
+      height: 0;
+      width: 0;
     }
   }
-  &_button {
-    .icon {}
+  &__title {
+    text-transform: uppercase;
+
+    margin-top: 92px;
+    @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
+
   }
-  &__link {}
+  &__content {
+    margin-top: 21px;
+    @include font-type($color_text_dark, $OpenSans, 17px, 400, 31px, normal);
+
+  }
+  &__list {
+    margin-top: 50px;
+  }
+  &__item {
+    margin-top: 18px;
+    h5 {
+      .icon {
+        margin-right: 25px;
+      }
+    }
+  }
+  &__button {
+    margin-top: 51px;
+    width: 262px;
+    height: 60px;
+    border: 2px solid $color_text_dark;
+    display: inline-block;
+    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
+    .icon {
+      margin-right: 15px;
+    }
+    padding: 20px 40px 0 40px;
+
+  }
+  &__link {
+    display: inline-block;
+    padding: 22px 34px 0 34px;
+
+  }
 }
 
 .features {
-  background-color: #2b542c;
+  background-color: $color_bg_dark;
+  padding: 69px 0 50px 0;
   &__item {
-    i {}
-    h3 {}
-    p {}
+    /*margin-top: 100px;*/
+    text-align: center;
+    padding: 0 40px;
+    i {
+      margin-top: 29px;
+
+    }
+    h3 {
+      margin-top: 40px;
+      @include font-type($color_text_light, $OpenSans, 18px, 600, normal, normal);
+    }
+    p {
+      margin: 33px 0 50px 0;
+      @include font-type($color_text_light, $OpenSans, 14px, 400, 26px, normal);
+    }
   }
 }
 
 .testimonials {
-  &__item {}
-  &__text {}
-  &__author--name {}
-  &__author--title {}
-  &_navigation {
+  &__box{
+    text-align: center;
+    margin-top: 57px
+  }
+  &__text {
+    display: inline-block;
+    max-width: 850px;
+    margin-top: 29px;
+    @include font-type($color_text_dark, $OpenSans, 22px, 400, 36px, normal);
+    text-align: center;
+  }
+  &__author--name {
+    margin-top: 30px;
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 20px, 600, normal, normal);
+  }
+  &__author--title {
+    margin-top: 1px;
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+  }
+  &__navigation {
+    margin: 38px 0 96px 0;
+    display: flex;
+    justify-content: center;
     a {
+      margin:0 20px;
+      padding: 0 0px;
       i {}
     }
   }
 }
 
 .subscription {
-  p {}
-  form {
-    .subscription__email {}
-    .subscription__button {}
+  background-color: $color_bg_dark;
+
+  p {
+    margin-top: 94px;
+    text-align: center;
+    @include font-type($color_text_light, $OpenSans,20px, 400, normal, normal);
+  }
+  form{
+
+  }
+  &__form{
+    margin: 52px 0 96px;
+    display: flex;
+    justify-content: center;
+  }
+  &__email {
+    display: block;
+    padding-left: 20px;
+    width: 310px;
+    height: 50px;
+    border: none;
+    background-color: $color_bg_light;
+  }
+  &__button {
+    display: block;
+    width: 60px;
+    height: 50px;
+    padding: 12px 18px;
+    background-color: $color_bg_light;
+    input{
+      background-color: $color_bg_light;
+      border: none;
+    }
   }
 }
 
 .footer {
-  &__link {
-    a {
-      img {}
-    }
-    p {}
+  &__list {
+    margin: 101px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+  }
+  &__item {
+
+  }
+  &__copyright {
+    margin: 50px 0 50px 0;
+    text-align: center;
+    @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+    img {}
   }
 }
+
 
 
