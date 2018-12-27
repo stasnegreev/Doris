@@ -320,7 +320,7 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 .testimonials {
   &__box{
     text-align: center;
-    margin-top: 57px;
+    margin: 57px 0 96px 0;
 
   }
   &__text {
@@ -339,16 +339,24 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     margin-top: 1px;
     text-align: center;
     @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+    margin: 0 0 38px 0;
   }
   &__navigation {
+    display: none;
     margin: 38px 0 96px 0;
-    display: flex;
+    //display: flex;
     justify-content: center;
     a {
       margin:0 20px;
       padding: 0 0px;
       i {}
     }
+  }
+  .icon-arr_l{
+      margin: 0 20px;
+  }
+  .icon-arr_r{
+    margin: 0 20px;
   }
 }
 

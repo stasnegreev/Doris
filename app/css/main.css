@@ -447,7 +447,7 @@ body * {
 
 .testimonials__box {
   text-align: center;
-  margin-top: 57px; }
+  margin: 57px 0 96px 0; }
 
 .testimonials__text {
   display: inline-block;
@@ -479,14 +479,12 @@ body * {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  margin: 0 0 38px 0; }
 
 .testimonials__navigation {
+  display: none;
   margin: 38px 0 96px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -494,6 +492,12 @@ body * {
   .testimonials__navigation a {
     margin: 0 20px;
     padding: 0 0px; }
+
+.testimonials .icon-arr_l {
+  margin: 0 20px; }
+
+.testimonials .icon-arr_r {
+  margin: 0 20px; }
 
 .subscription {
   background-color: #3b9e69; }
