@@ -1,4 +1,4 @@
-//:$(document).ready(function() {
+//;$(document).ready(function() {
 
 //   // установка года в copyrigth
 //   document.getElementById("thisyear").innerHTML = new Date().getFullYear();
@@ -25,41 +25,41 @@
 //   });
 // });
 
-     $('.owl-carousel').owlCarousel({
-         loop: true,
-         margin: 10,
-         dots:false,
-         nav: true,
-         navText: ['<i class="icon icon-arr_l"></i>', '<i class="icon icon-arr_r"></i>'],
-         items: 1,
-         autoplay: true,
-         autoplayTimeout: 10000,
 
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        nav: true,
+        navText: ['<i class="icon icon-arr_l"></i>', '<i class="icon icon-arr_r"></i>'],
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 10000,
 
-     })
-     ;(function($) {
-
-    // DOM Ready
-    $(function() {
-
-        // Binding a click event
-        // From jQuery v.1.7.0 use .on() instead of .bind()
-        $('#about__button').bind('click', function(e) {
-            // Prevents the default action to be triggered.
-            e.preventDefault();
-            // Triggering bPopup when click event is fired
-            $('#about__video').bPopup({
-                modalClose: true,
-                opacity: 0.6,
-                positionStyle: 'fixed',
-                //easing: 'easeOutBack', //uses jQuery easing plugin
-                speed: 450,
-                transition: 'slideDown',
-            });
-
-        });
 
     });
+    (function ($) {
+        // DOM Ready
+        $(function () {
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('#about__button').bind('click', function (e) {
+                // Prevents the default action to be triggered.
+                e.preventDefault();
+                // Triggering bPopup when click event is fired
+                $('#about__video').bPopup({
+                    modalClose: true,
+                    opacity: 0.6,
+                    positionStyle: 'fixed',
+                    //easing: 'easeOutBack', //uses jQuery easing plugin
+                    speed: 450,
+                    transition: 'slideDown',
+                });
+            });
+        });
+    })(jQuery);
 
-})(jQuery);
+
+
+
 
