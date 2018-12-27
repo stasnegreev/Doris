@@ -281,12 +281,18 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     height: 60px;
     border: 2px solid $color_text_dark;
     display: inline-block;
-    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
+    @include font-type($color_text_dark, $OpenSans, 16px, 600, normal, normal);
     .icon {
       margin-right: 15px;
     }
     padding: 20px 40px 0 40px;
 
+  }
+  &__video{
+    display:none;
+    height: 420px;
+    width: 768px;
+    background-color: gray;
   }
   &__link {
     display: inline-block;
@@ -341,17 +347,7 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
     margin: 0 0 38px 0;
   }
-  &__navigation {
-    display: none;
-    margin: 38px 0 96px 0;
-    //display: flex;
-    justify-content: center;
-    a {
-      margin:0 20px;
-      padding: 0 0px;
-      i {}
-    }
-  }
+
   .icon-arr_l{
       margin: 0 20px;
   }

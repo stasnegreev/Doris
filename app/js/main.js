@@ -37,4 +37,29 @@
 
 
      })
+     ;(function($) {
+
+    // DOM Ready
+    $(function() {
+
+        // Binding a click event
+        // From jQuery v.1.7.0 use .on() instead of .bind()
+        $('#about__button').bind('click', function(e) {
+            // Prevents the default action to be triggered.
+            e.preventDefault();
+            // Triggering bPopup when click event is fired
+            $('#about__video').bPopup({
+                modalClose: true,
+                opacity: 0.6,
+                positionStyle: 'fixed',
+                //easing: 'easeOutBack', //uses jQuery easing plugin
+                speed: 450,
+                transition: 'slideDown',
+            });
+
+        });
+
+    });
+
+})(jQuery);
 

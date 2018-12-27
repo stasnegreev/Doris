@@ -408,13 +408,18 @@ body * {
     display: inline-block;
     color: #6e6c6c;
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     line-height: normal;
     letter-spacing: normal;
     padding: 20px 40px 0 40px; }
     .about__button .icon {
       margin-right: 15px; }
+  .about__video {
+    display: none;
+    height: 420px;
+    width: 768px;
+    background-color: gray; }
   .about__link {
     display: inline-block;
     padding: 22px 34px 0 34px; }
@@ -481,17 +486,6 @@ body * {
   line-height: normal;
   letter-spacing: normal;
   margin: 0 0 38px 0; }
-
-.testimonials__navigation {
-  display: none;
-  margin: 38px 0 96px 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .testimonials__navigation a {
-    margin: 0 20px;
-    padding: 0 0px; }
 
 .testimonials .icon-arr_l {
   margin: 0 20px; }
