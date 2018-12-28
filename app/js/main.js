@@ -1,4 +1,4 @@
-//;$(document).ready(function() {
+;$(document).ready(function() {
 
 //   // установка года в copyrigth
 //   document.getElementById("thisyear").innerHTML = new Date().getFullYear();
@@ -35,9 +35,8 @@
         items: 1,
         autoplay: true,
         autoplayTimeout: 10000,
-
-
     });
+
     (function ($) {
         // DOM Ready
         $(function () {
@@ -58,6 +57,31 @@
             });
         });
     })(jQuery);
+
+    $(".header__nav a").on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
+
+    $('[data-fancybox]').fancybox({
+        buttons: [
+            //"zoom",
+            //"share",
+            //"slideShow",
+            //"fullScreen",
+            //"download",
+            //"thumbs",
+            "close"
+            ],
+        loop: true,
+        transitionEffect: "slide",
+    });
+
+});
 
 
 
