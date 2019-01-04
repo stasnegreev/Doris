@@ -51,6 +51,8 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 @import "animation";
 
+// animation hover
+$speed_hover: 0.2s;
 
 // COMMON
 //a {
@@ -75,8 +77,13 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     padding: 0 ;
     position: relative;
     a{
+
       @include font-type($color_text_dark, $OpenSans, 16px, 400, normal, normal);
     }
+    a:hover{
+      text-decoration: none;
+    }
+
 
   @include respond-to(mb) {
     text-align: center;
@@ -117,10 +124,19 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
           }
 
         a {
+          transition-property: color;
+          transition-duration: $speed_hover;
+          transition-timing-function: linear;
           @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
+        }
+        a:hover {
+          color: $color_text_dark;
+
         }
       }
     }
+
+
   }
   &__social{
 
@@ -138,6 +154,9 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
         display: flex;
         padding: 10px;
         a {
+          transition-property: color, background-color;
+          transition-duration: $speed_hover;
+          transition-timing-function: linear;
           @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
           background-color: $white;
           border-radius: 50%;
@@ -146,9 +165,15 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
           padding: 4px 0;
           text-align: center;
         }
+        a:hover {
+          color: $color_text_light;
+          background-color: $color_text_dark;
+        }
       }
     }
   }
+
+
 }
 
 .billboard {
@@ -196,18 +221,33 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     margin-top: 27px;
   }
   &__button{
+
     margin: 32px 7px 0 0;
     width: 225px;
     height: 60px;
     border: 2px solid $color_text_dark;
     display: inline-block;
+    transition-property: color, background-color;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
+    &:hover {
+      color: $color_text_light;
+      background-color: $color_text_dark;
+    }
     i {
       margin-right: 15px;
     }
     a {
+      transition-property: color, background-color;
+      transition-duration: $speed_hover;
+      transition-timing-function: linear;
       display: block;
       padding: 15px 30px;
       @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
+
+    }
+    a:hover {
+      color: $color_text_light;
     }
   }
 }
@@ -220,7 +260,7 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin: 31px 0 15px 0;
+
     }
     &_item {
 
@@ -229,7 +269,15 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
       }
 
       a {
-        img {}
+        img {
+          margin: 31px 0 15px 0;
+          transition-property: margin;
+          transition-duration: $speed_hover;
+          transition-timing-function: linear;
+        }
+        img:hover {
+          margin: 16px 0 30px 0;
+        }
       }
     }
   }
@@ -239,8 +287,60 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
   padding: 0 0 105px 0;
   background-color: $color_bg_light;
   &__iphone {
+    @keyframes show {
+      0% {
+        margin: 89px 132px 0px 0px;
+        //opacity: 0;
+      }
+      10% {
+        margin: 89px 152px 0px 0px;
+        //opacity: 0;
+      }
+      20% {
+        margin: 89px 112px 0px 0px;
+        //opacity: 0;
+      }
+      30% {
+        margin: 89px 152px 0px 0px;
+        //opacity: 0;
+      }
+      40% {
+        margin: 89px 112px 0px 0px;
+        //opacity: 0;
+      }
+      50% {
+        margin: 89px 152px 0px 0px;
+        //opacity: 0;
+      }
+      60% {
+        margin: 89px 112px 0px 0px;
+        //opacity: 0;
+      }
+      70% {
+        margin: 89px 152px 0px 0px;
+        //opacity: 0;
+      }
+      80% {
+         margin: 89px 112px 0px 0px;
+         //opacity: 0;
+       }
+      90% {
+        margin: 89px 152px 0px 0px;
+        //opacity: 0;
+      }
+      100% {
+        margin: 89px 132px 0px 0px;
+        opacity: 1;
+      }
+    }
     margin: 89px 132px 0px 0px;
     float: right;
+    &:hover {
+      animation-name: show;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+     // animation-delay: 2s;
+    }
 
     @include respond-to (sm){
       margin: 89px 0px 0px 0px;
@@ -280,12 +380,20 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     width: 262px;
     height: 60px;
     border: 2px solid $color_text_dark;
+    padding: 18px 40px 0 40px;
     display: inline-block;
     @include font-type($color_text_dark, $OpenSans, 16px, 600, normal, normal);
+    transition-property: color, background-color;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
+    &:hover {
+      color: $color_text_light;
+      background-color: $color_text_dark;
+    }
     .icon {
       margin-right: 15px;
     }
-    padding: 20px 40px 0 40px;
+
 
   }
   &__video{
@@ -297,8 +405,14 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
   &__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
-
+    transition-property: color;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
+    &:hover {
+      color: rgba(110, 108,108, 0.5);
+    }
   }
+
 }
 
 .features {
@@ -386,22 +500,41 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     height: 50px;
     padding: 12px 18px;
     background-color: $color_bg_light;
+    transition-property: opacity;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
     input{
       background-color: $color_bg_light;
       border: none;
+    }
+    &:hover {
+      opacity: 0.5;
     }
   }
 }
 
 .footer {
   &__list {
-    margin: 101px auto 0 auto;
+    margin: 0px auto 0 auto;
     display: flex;
     justify-content: space-between;
     width: 250px;
   }
   &__item {
 
+    transition-property: margin;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
+    img {
+      margin: 101px 0 0 0;
+      transition-property: margin, padding;
+      transition-duration: $speed_hover;
+      transition-timing-function: linear;
+    }
+    img:hover {
+      margin: 81px 0 0px 0;
+      padding: 0 0 20px 0;
+    }
   }
   &__copyright {
     margin: 50px 0 50px 0;

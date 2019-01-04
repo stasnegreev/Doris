@@ -3,28 +3,28 @@
 //   // установка года в copyrigth
 //   document.getElementById("thisyear").innerHTML = new Date().getFullYear();
 
-//   // отправка почты
-//   $(".send").submit(function() {
-//       var th = $(this);
-//       $.ajax({
-//           type: "POST",
-//           url: "../php/mail.php",
-//           data: th.serialize(),
-//           success: function(json) {
-//               th.hide();
-//               $(".jsFormPopup + .success").fadeIn();
-//                   setTimeout(function() {
-//                   th.trigger("reset");
-//               }, 1000);
-//           },
-//           error: function(json) {
-//               console.log('error', json);
-//           },
-//       });
-//       return false;
-//   });
-// });
-
+/* // отправка почты
+   $(".send").submit(function() {
+      var th = $(this);
+      $.ajax({
+           type: "POST",
+           url: "../php/mail.php",
+           data: th.serialize(),
+           success: function(json) {
+              th.hide();
+               $(".jsFormPopup + .success").fadeIn();
+                   setTimeout(function() {
+                   th.trigger("reset");
+               }, 1000);
+           },
+           error: function(json) {
+               console.log('error', json);
+           },
+       });
+       return false;
+   });
+ });
+*/
 
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -80,7 +80,14 @@
         loop: true,
         transitionEffect: "slide",
     });
-
+    $(".subscription__button").hover(function(event){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
 });
 
 
