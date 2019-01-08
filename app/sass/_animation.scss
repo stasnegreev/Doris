@@ -2,3 +2,49 @@
 //     0% {background-position: 0 0;}
 //     100% {background-position: 60px 0;}
 // }
+@keyframes show {
+  0% {
+    margin: 89px 132px 0px 0px;
+    //opacity: 0;
+  }
+  10% {
+    margin: 89px 152px 0px 0px;
+    //opacity: 0;
+  }
+  20% {
+    margin: 89px 112px 0px 0px;
+    //opacity: 0;
+  }
+  30% {
+    margin: 89px 152px 0px 0px;
+    //opacity: 0;
+  }
+  40% {
+    margin: 89px 112px 0px 0px;
+    //opacity: 0;
+  }
+  50% {
+    margin: 89px 152px 0px 0px;
+    //opacity: 0;
+  }
+  60% {
+    margin: 89px 112px 0px 0px;
+    //opacity: 0;
+  }
+  70% {
+    margin: 89px 152px 0px 0px;
+    //opacity: 0;
+  }
+  80% {
+    margin: 89px 112px 0px 0px;
+    //opacity: 0;
+  }
+  90% {
+    margin: 89px 152px 0px 0px;
+    //opacity: 0;
+  }
+  100% {
+    margin: 89px 132px 0px 0px;
+    opacity: 1;
+  }
+}

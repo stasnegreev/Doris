@@ -79,11 +79,17 @@
 			                <p class="billboard__content">
 			                    Whit only your iphone and capture app you can take stunning image loke a professional Phorographer.
 			                </p>
-			                <div class="billboard__button billboard__button--iphone">
-			                    <a href=""><i class="icon icon-apple"></i>IPHONE APP</a>
-			                </div>
-			                <div class="billboard__button billboard__button--android">
-			                    <a href=""><i class="icon icon-android"></i> ANDROID APP</a>
+			                <div class="billboard__buttons">
+			                    <div class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="0s">
+			                        <div class="billboard__button billboard__button--iphone">
+			                            <a href=""><i class="icon icon-apple"></i>IPHONE APP</a>
+			                        </div>
+			                    </div>
+			                    <div class="wow slideInRight" data-wow-duration="2s" data-wow-delay="0s">
+			                        <div class="billboard__button billboard__button--android">
+			                            <a href=""><i class="icon icon-android"></i> ANDROID APP</a>
+			                        </div>
+			                    </div>
 			                </div>
 			            </div>
 			        </div>
@@ -95,7 +101,7 @@
 			<div class = "container" >
 			    <div class="row  ">
 			        <div class="col-sm-12" >
-			            <ul class="featured__campany_list">
+			            <ul class="featured__campany_list wow bounceInDown" data-wow-duration="2s" data-wow-delay="1s"">
 			                <li  class="featured__campany_item">
 			                    <a href="/img/google.png" data-fancybox="gallery" data-caption="" data-animation-effect="false">
 			                        <img src="/img/google.png" alt="google full logo"  >
@@ -126,8 +132,10 @@
 			<!-- ABOUT -->
 			<div class = "container" >
 			    <div class="row ">
-			        <div class="col-sm-6" >
-			            <img class="about__iphone" src="/img/iph.png">
+			        <div class="col-sm-6 " >
+			            <div class="wow shake" data-wow-duration="2s" data-wow-delay="2s">
+			                <img class="about__iphone " src="/img/iph.png">
+			            </div>
 			        </div>
 			        <div class="col-sm-6">
 			            <h2 class="about__title">
@@ -328,7 +336,7 @@
 			                Join Our Liste and stay updated!
 			            </p>
 			            <form action="/sendEmail" method="POST">
-			                <div class="subscription__form">
+			                <div class="subscription__form wow bounceInUp">
 			                    <input class="subscription__email" name="email-address" placeholder="Enter your email">
 			                    <div class="subscription__button send">
 			                        <input class=" icon icon-mail_dark" type="submit" name="submit" value="">
@@ -375,6 +383,9 @@
 	<!-- JS -->
 	<script src="js/libs.min.js?v=1.0"></script>
 	<script src="js/main.min.js?v=1.0"></script>
+	<script>
+        new WOW().init();
+	</script>
 
 
 </body>

@@ -198,6 +198,56 @@ body * {
   font-weight: normal;
   font-style: normal; }
 
+@-webkit-keyframes show {
+  0% {
+    margin: 89px 132px 0px 0px; }
+  10% {
+    margin: 89px 152px 0px 0px; }
+  20% {
+    margin: 89px 112px 0px 0px; }
+  30% {
+    margin: 89px 152px 0px 0px; }
+  40% {
+    margin: 89px 112px 0px 0px; }
+  50% {
+    margin: 89px 152px 0px 0px; }
+  60% {
+    margin: 89px 112px 0px 0px; }
+  70% {
+    margin: 89px 152px 0px 0px; }
+  80% {
+    margin: 89px 112px 0px 0px; }
+  90% {
+    margin: 89px 152px 0px 0px; }
+  100% {
+    margin: 89px 132px 0px 0px;
+    opacity: 1; } }
+
+@keyframes show {
+  0% {
+    margin: 89px 132px 0px 0px; }
+  10% {
+    margin: 89px 152px 0px 0px; }
+  20% {
+    margin: 89px 112px 0px 0px; }
+  30% {
+    margin: 89px 152px 0px 0px; }
+  40% {
+    margin: 89px 112px 0px 0px; }
+  50% {
+    margin: 89px 152px 0px 0px; }
+  60% {
+    margin: 89px 112px 0px 0px; }
+  70% {
+    margin: 89px 152px 0px 0px; }
+  80% {
+    margin: 89px 112px 0px 0px; }
+  90% {
+    margin: 89px 152px 0px 0px; }
+  100% {
+    margin: 89px 132px 0px 0px;
+    opacity: 1; } }
+
 .separator {
   width: 50%;
   margin: 0 auto;
@@ -345,6 +395,15 @@ body * {
         margin-top: 63px; } }
   .billboard__content {
     margin-top: 27px; }
+  .billboard__buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left; }
   .billboard__button {
     margin: 32px 7px 0 0;
     width: 225px;
@@ -370,7 +429,7 @@ body * {
       -webkit-transition-timing-function: linear;
       transition-timing-function: linear;
       display: block;
-      padding: 15px 30px;
+      padding: 15px 25px;
       color: #6e6c6c;
       font-family: "Open Sans", sans-serif;
       font-size: 18px;
@@ -413,59 +472,7 @@ body * {
   .about__iphone {
     margin: 89px 132px 0px 0px;
     float: right; }
-
-@-webkit-keyframes show {
-  0% {
-    margin: 89px 132px 0px 0px; }
-  10% {
-    margin: 89px 152px 0px 0px; }
-  20% {
-    margin: 89px 112px 0px 0px; }
-  30% {
-    margin: 89px 152px 0px 0px; }
-  40% {
-    margin: 89px 112px 0px 0px; }
-  50% {
-    margin: 89px 152px 0px 0px; }
-  60% {
-    margin: 89px 112px 0px 0px; }
-  70% {
-    margin: 89px 152px 0px 0px; }
-  80% {
-    margin: 89px 112px 0px 0px; }
-  90% {
-    margin: 89px 152px 0px 0px; }
-  100% {
-    margin: 89px 132px 0px 0px;
-    opacity: 1; } }
-
-@keyframes show {
-  0% {
-    margin: 89px 132px 0px 0px; }
-  10% {
-    margin: 89px 152px 0px 0px; }
-  20% {
-    margin: 89px 112px 0px 0px; }
-  30% {
-    margin: 89px 152px 0px 0px; }
-  40% {
-    margin: 89px 112px 0px 0px; }
-  50% {
-    margin: 89px 152px 0px 0px; }
-  60% {
-    margin: 89px 112px 0px 0px; }
-  70% {
-    margin: 89px 152px 0px 0px; }
-  80% {
-    margin: 89px 112px 0px 0px; }
-  90% {
-    margin: 89px 152px 0px 0px; }
-  100% {
-    margin: 89px 132px 0px 0px;
-    opacity: 1; } }
     .about__iphone:hover {
-      -webkit-animation-name: show;
-      animation-name: show;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
       -webkit-animation-timing-function: ease-in-out;

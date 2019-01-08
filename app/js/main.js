@@ -88,6 +88,8 @@
         e.preventDefault();
         return false;
     });
+    new WOW().init();
+
 });
 
 

@@ -220,6 +220,10 @@ $speed_hover: 0.2s;
   &__content{
     margin-top: 27px;
   }
+  &__buttons {
+    display: flex;
+    justify-content: left;
+  }
   &__button{
 
     margin: 32px 7px 0 0;
@@ -242,7 +246,7 @@ $speed_hover: 0.2s;
       transition-duration: $speed_hover;
       transition-timing-function: linear;
       display: block;
-      padding: 15px 30px;
+      padding: 15px 25px;
       @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
 
     }
@@ -287,56 +291,11 @@ $speed_hover: 0.2s;
   padding: 0 0 105px 0;
   background-color: $color_bg_light;
   &__iphone {
-    @keyframes show {
-      0% {
-        margin: 89px 132px 0px 0px;
-        //opacity: 0;
-      }
-      10% {
-        margin: 89px 152px 0px 0px;
-        //opacity: 0;
-      }
-      20% {
-        margin: 89px 112px 0px 0px;
-        //opacity: 0;
-      }
-      30% {
-        margin: 89px 152px 0px 0px;
-        //opacity: 0;
-      }
-      40% {
-        margin: 89px 112px 0px 0px;
-        //opacity: 0;
-      }
-      50% {
-        margin: 89px 152px 0px 0px;
-        //opacity: 0;
-      }
-      60% {
-        margin: 89px 112px 0px 0px;
-        //opacity: 0;
-      }
-      70% {
-        margin: 89px 152px 0px 0px;
-        //opacity: 0;
-      }
-      80% {
-         margin: 89px 112px 0px 0px;
-         //opacity: 0;
-       }
-      90% {
-        margin: 89px 152px 0px 0px;
-        //opacity: 0;
-      }
-      100% {
-        margin: 89px 132px 0px 0px;
-        opacity: 1;
-      }
-    }
+
     margin: 89px 132px 0px 0px;
     float: right;
     &:hover {
-      animation-name: show;
+      //animation-name: show;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
      // animation-delay: 2s;
