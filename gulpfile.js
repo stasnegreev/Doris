@@ -66,8 +66,7 @@ gulp.task('scripts:libs', function() {
   	 'bower_components/owl.carousel/dist/owl.carousel.min.js',
      'bower_components/wow/dist/wow.min.js',
      'bower_components/fancybox/dist/jquery.fancybox.min.js',
-    // 'bower_components/particles.js/particles.min.js',
-      'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   	])
     .pipe(concat('libs.min.js'))
     .pipe(gulp.dest('app/js'));
