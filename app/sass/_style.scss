@@ -8,6 +8,7 @@
 $Arial: 'Arial', sans-serif;
 $OpenSans: 'Open Sans',sans-serif;
 $Socialico: 'Socialico', sans-serif;
+$FontAwesome: 'FontAwesome', sans-serif;
 @font-face {
   font-family:"Socialico";
   src:url("../fonts/Socialico.eot?") format("eot"),
@@ -155,29 +156,38 @@ $speed_hover: 0.2s;
       }
 
       li {
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
+    //    display: flex;
+    //    justify-content:center;
+    //    align-items: center;
+    //    width: 30px;
+    //    height: 30px;
         margin: 0 10px;
-        background-color: $white;
-        border-radius: 50%;
-        transition-property: color, background-color;
-        transition-duration: $speed_hover;
-        transition-timing-function: linear;
+     //   background-color: $white;
+     //   border-radius: 50%;
+     //   transition-property: color, background-color;
+     //   transition-duration: $speed_hover;
+     //   transition-timing-function: linear;/
         a {
-
-          padding: 4px 6px;
-          @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
+      //    display: flex;
+      //    justify-content:center;
+       //   align-items: center;
+      //    height: auto;
+      //    width: auto;
           transition-property: color, background-color;
           transition-duration: $speed_hover;
           transition-timing-function: linear;
+          .fa-circle {
+            transition-property: color;
+            transition-duration: $speed_hover;
+            transition-timing-function: linear;
+          }
         }
         &:hover {
-          background-color: $color_text_dark;
           a {
             color: $color_text_light;
+            .fa-circle {
+              color: $color_text_dark;
+            }
           }
         }
       }
@@ -363,12 +373,11 @@ $speed_hover: 0.2s;
       margin-right: 15px;
     }
   }
-
+  &__frame {
     p {
-
-
       color: red;
     }
+  }
 
   &__link {
     display: inline-block;
