@@ -18,13 +18,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-android {
   background-image: url(sprite.png);
-  background-position: 0px -98px;
+  background-position: -128px 0px;
   width: 14px;
   height: 16px;
 }
 .icon-apple {
   background-image: url(sprite.png);
-  background-position: -14px -98px;
+  background-position: -128px -16px;
   width: 12px;
   height: 16px;
 }
@@ -40,6 +40,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 34px;
   height: 34px;
 }
+.icon-close-cross {
+  background-image: url(sprite.png);
+  background-position: -64px -66px;
+  width: 24px;
+  height: 24px;
+}
 .icon-dialog_white {
   background-image: url(sprite.png);
   background-position: -36px -34px;
@@ -48,19 +54,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-eyeball {
   background-image: url(sprite.png);
-  background-position: -106px 0px;
+  background-position: -106px -21px;
   width: 22px;
   height: 17px;
 }
 .icon-location {
   background-image: url(sprite.png);
-  background-position: -106px -34px;
+  background-position: -106px -55px;
   width: 17px;
   height: 21px;
 }
 .icon-mail_dark {
   background-image: url(sprite.png);
-  background-position: -106px -70px;
+  background-position: 0px -98px;
   width: 20px;
   height: 15px;
 }
@@ -72,7 +78,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-painting {
   background-image: url(sprite.png);
-  background-position: -64px -66px;
+  background-position: -106px 0px;
   width: 22px;
   height: 21px;
 }
@@ -90,7 +96,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-play {
   background-image: url(sprite.png);
-  background-position: -86px -66px;
+  background-position: -88px -66px;
   width: 14px;
   height: 17px;
 }
@@ -108,13 +114,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-videoсam {
   background-image: url(sprite.png);
-  background-position: -106px -55px;
+  background-position: -106px -76px;
   width: 22px;
   height: 15px;
 }
 .icon-сamera {
   background-image: url(sprite.png);
-  background-position: -106px -17px;
+  background-position: -106px -38px;
   width: 22px;
   height: 17px;
 }

@@ -7,16 +7,9 @@
 // fonts
 $Arial: 'Arial', sans-serif;
 $OpenSans: 'Open Sans',sans-serif;
-$Socialico: 'Socialico', sans-serif;
+
 $FontAwesome: 'FontAwesome', sans-serif;
-@font-face {
-  font-family:"Socialico";
-  src:url("../fonts/Socialico.eot?") format("eot"),
-  url("../fonts/Socialico.woff") format("woff"),
-  url("../fonts/Socialico.ttf") format("truetype"),
-  url("../fonts/Socialico.svg#Socialico") format("svg");
-  font-weight:normal;font-style:normal;
-}
+
 
 // типографика
 // @include font-type($color, $font-family, $font-size, $font-weight, $line-height, $letter-spacing)
@@ -312,12 +305,9 @@ $speed_hover: 0.2s;
   @include respond-to(xs){
     padding: 0 0 105px 20px;
   }
-
   &__iphone {
-
     margin: 89px 132px 0px 0px;
     float: right;
-
     @include respond-to (sm){
       margin: 89px 0px 0px 0px;
       float: none;
@@ -327,7 +317,6 @@ $speed_hover: 0.2s;
       height: 0;
       width: 0;
     }
-
   }
   &__title {
     text-transform: uppercase;
@@ -337,7 +326,6 @@ $speed_hover: 0.2s;
     @include respond-to(mb) {
       @include font-type($color_text_dark, $OpenSans, 18px, 700,44px, 3px);
     }
-
   }
   &__content {
     margin-top: 21px;
@@ -349,8 +337,16 @@ $speed_hover: 0.2s;
   &__item {
     margin-top: 18px;
     h5 {
+      display: flex;
+      flex-wrap: nowrap;
       .icon {
         margin-right: 25px;
+      }
+      .icon-videoсam{
+        width: 24px;
+      }
+      p{
+
       }
     }
   }
@@ -373,12 +369,29 @@ $speed_hover: 0.2s;
       margin-right: 15px;
     }
   }
-  &__frame {
-    p {
-      color: red;
+  &__video {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    .video{
+      padding: 5%;
+      position: absolute;
+      top: 0;
+      //left: auto;
+      width: 100%;
+      height: 100%;
+    }
+    .videoClosed {
+      margin: 5%;
+      padding: 1%;
+
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
-
   &__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
@@ -481,6 +494,7 @@ $speed_hover: 0.2s;
     justify-content: center;
   }
   &__email {
+
     display: block;
     padding-left: 20px;
     width: 310px;

@@ -75,7 +75,7 @@ body * {
   display: inline-block; }
 
 .icon-android {
-  background-position: 0 -98px;
+  background-position: -128px 0;
   width: 14px; }
 
 .icon-android, .icon-apple {
@@ -83,7 +83,7 @@ body * {
   height: 16px; }
 
 .icon-apple {
-  background-position: -14px -98px;
+  background-position: -128px -16px;
   width: 12px; }
 
 .icon-arr_l {
@@ -99,6 +99,12 @@ body * {
   width: 34px;
   height: 34px; }
 
+.icon-close-cross {
+  background-image: url(sprite.png);
+  background-position: -64px -66px;
+  width: 24px;
+  height: 24px; }
+
 .icon-dialog_white {
   background-image: url(sprite.png);
   background-position: -36px -34px;
@@ -106,7 +112,7 @@ body * {
   height: 32px; }
 
 .icon-eyeball {
-  background-position: -106px 0;
+  background-position: -106px -21px;
   width: 22px;
   height: 17px; }
 
@@ -114,13 +120,13 @@ body * {
   background-image: url(sprite.png); }
 
 .icon-location {
-  background-position: -106px -34px;
+  background-position: -106px -55px;
   width: 17px;
   height: 21px; }
 
 .icon-mail_dark {
   background-image: url(sprite.png);
-  background-position: -106px -70px;
+  background-position: 0 -98px;
   width: 20px;
   height: 15px; }
 
@@ -133,7 +139,7 @@ body * {
   background-image: url(sprite.png); }
 
 .icon-painting {
-  background-position: -64px -66px;
+  background-position: -106px 0;
   width: 22px;
   height: 21px; }
 
@@ -151,7 +157,7 @@ body * {
 
 .icon-play {
   background-image: url(sprite.png);
-  background-position: -86px -66px;
+  background-position: -88px -66px;
   width: 14px;
   height: 17px; }
 
@@ -168,7 +174,7 @@ body * {
   width: 32px; }
 
 .icon-videoсam {
-  background-position: -106px -55px;
+  background-position: -106px -76px;
   height: 15px; }
 
 .icon-videoсam, .icon-сamera {
@@ -176,14 +182,8 @@ body * {
   width: 22px; }
 
 .icon-сamera {
-  background-position: -106px -17px;
+  background-position: -106px -38px;
   height: 17px; }
-
-@font-face {
-  font-family: "Socialico";
-  src: url("../fonts/Socialico.eot?") format("eot"), url("../fonts/Socialico.woff") format("woff"), url("../fonts/Socialico.ttf") format("truetype"), url("../fonts/Socialico.svg#Socialico") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 
 .separator {
   width: 50%;
@@ -462,8 +462,18 @@ body * {
     margin-top: 50px; }
   .about__item {
     margin-top: 18px; }
-    .about__item h5 .icon {
-      margin-right: 25px; }
+    .about__item h5 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+      .about__item h5 .icon {
+        margin-right: 25px; }
+      .about__item h5 .icon-videoсam {
+        width: 24px; }
   .about__button {
     margin-top: 51px;
     width: 262px;
@@ -488,8 +498,24 @@ body * {
       background-color: #6e6c6c; }
     .about__button .icon {
       margin-right: 15px; }
-  .about__frame p {
-    color: red; }
+  .about__video {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; }
+    .about__video .video {
+      padding: 5%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+    .about__video .videoClosed {
+      margin: 5%;
+      padding: 1%;
+      position: absolute;
+      top: 0;
+      right: 0; }
   .about__link {
     display: inline-block;
     padding: 22px 34px 0 34px;

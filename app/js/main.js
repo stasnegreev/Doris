@@ -41,7 +41,7 @@
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
-        $('').bPopup({
+        $('about__frame').bPopup({
             closeClass:'b-close',
             modalClose: true,
             opacity: 0.6,
@@ -51,6 +51,22 @@
             transition: 'slideDown',
         });
     });
+
+    $('#about__button').bind('click', function (e) {
+        // Prevents the default action to be triggered.
+        e.preventDefault();
+        // Triggering bPopup when click event is fired
+        $('#about__video').bPopup({
+            modalClose: true,
+            opacity: 0.6,
+            positionStyle: 'fixed',
+            //easing: 'easeOutBack', //uses jQuery easing plugin
+            speed: 450,
+            transition: 'slideDown',
+            closeClass: 'videoClosed',
+        });
+    });
+
 
     $(".header__nav a").on("click", function(e){
         var anchor = $(this);
