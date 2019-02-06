@@ -37,22 +37,8 @@
         autoplayTimeout: 10000,
     });
 
-    $('#about__button').on('click', function (e) {
-        // Prevents the default action to be triggered.
-        e.preventDefault();
-        // Triggering bPopup when click event is fired
-        $('about__frame').bPopup({
-            closeClass:'b-close',
-            modalClose: true,
-            opacity: 0.6,
-            positionStyle: 'fixed',
-            //easing: 'easeOutBack', //uses jQuery easing plugin
-            speed: 450,
-            transition: 'slideDown',
-        });
-    });
 
-    $('#about__button').bind('click', function (e) {
+    $('#about__button').on('click', function (e) {
         // Prevents the default action to be triggered.
         e.preventDefault();
         // Triggering bPopup when click event is fired
@@ -90,14 +76,8 @@
         loop: true,
         transitionEffect: "slide",
     });
-    $(".subscription__button").hover(function(event){
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 777);
-        e.preventDefault();
-        return false;
-    });
+
+
     new WOW().init();
 
 });

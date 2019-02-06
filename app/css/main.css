@@ -235,12 +235,8 @@ body * {
       display: inline-block;
       margin: 0 19px; }
       .header__nav ul li a {
-        -webkit-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        transition-timing-function: linear;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
         color: #FFFFFF;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
@@ -284,19 +280,11 @@ body * {
     .header__social ul li {
       margin: 0 10px; }
       .header__social ul li a {
-        -webkit-transition-property: color, background-color;
-        transition-property: color, background-color;
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        transition-timing-function: linear; }
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s; }
         .header__social ul li a .fa-circle {
-          -webkit-transition-property: color;
-          transition-property: color;
-          -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-          -webkit-transition-timing-function: linear;
-          transition-timing-function: linear; }
+          -webkit-transition: color 0.2s;
+          transition: color 0.2s; }
       .header__social ul li:hover a {
         color: #FFFFFF; }
         .header__social ul li:hover a .fa-circle {
@@ -353,21 +341,15 @@ body * {
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
     -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear; }
+    transition-duration: 0.2s; }
     .billboard__button:hover {
       color: #FFFFFF;
       background-color: #6e6c6c; }
     .billboard__button i {
       margin-right: 15px; }
     .billboard__button a {
-      -webkit-transition-property: color, background-color;
-      transition-property: color, background-color;
-      -webkit-transition-duration: 0.2s;
-      transition-duration: 0.2s;
-      -webkit-transition-timing-function: linear;
-      transition-timing-function: linear;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
       display: block;
       padding: 15px 25px;
       color: #6e6c6c;
@@ -405,7 +387,6 @@ body * {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: transform;
     -webkit-transition-property: -webkit-transform;
     transition-property: -webkit-transform;
     transition-property: transform;
@@ -422,11 +403,11 @@ body * {
     .about {
       padding: 0 0 105px 20px; } }
   .about__iphone {
-    margin: 89px 132px 0px 0px;
+    margin: 89px 132px 0 0;
     float: right; }
     @media only screen and (max-width: 970px) {
       .about__iphone {
-        margin: 89px 0px 0px 0px;
+        margin-top: 89px;
         float: none; } }
     @media only screen and (max-width: 750px) {
       .about__iphone {
@@ -490,9 +471,7 @@ body * {
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
     -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear; }
+    transition-duration: 0.2s; }
     .about__button:hover {
       color: #FFFFFF;
       background-color: #6e6c6c; }
@@ -519,12 +498,8 @@ body * {
   .about__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
     .about__link:hover {
       color: rgba(110, 108, 108, 0.5); }
 
@@ -532,7 +507,6 @@ body * {
   background-color: #3b9e69;
   padding: 69px 0 50px 0; }
   .features__item {
-    /*margin-top: 100px;*/
     text-align: center;
     padding: 0 40px; }
     .features__item i {
@@ -589,7 +563,6 @@ body * {
   letter-spacing: normal; }
 
 .testimonials__author--title {
-  margin-top: 1px;
   text-align: center;
   color: #6e6c6c;
   font-family: "Open Sans", sans-serif;
@@ -612,7 +585,6 @@ body * {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-property: transform;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -669,7 +641,7 @@ body * {
       opacity: 0.5; }
 
 .footer__list {
-  margin: 0px auto 0 auto;
+  margin: 0 auto 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -681,22 +653,16 @@ body * {
   width: 250px; }
 
 .footer__item {
-  -webkit-transition-property: margin;
-  transition-property: margin;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear; }
+  -webkit-transition: margin 0.2s;
+  transition: margin 0.2s; }
   .footer__item img {
     margin: 101px 0 0 0;
     -webkit-transition-property: margin, padding;
     transition-property: margin, padding;
     -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear; }
+    transition-duration: 0.2s; }
   .footer__item img:hover {
-    margin: 81px 0 0px 0;
+    margin: 81px 0 0 0;
     padding: 0 0 20px 0; }
 
 .footer__copyright {
