@@ -7,27 +7,7 @@
 // fonts
 $Arial: 'Arial', sans-serif;
 $OpenSans: 'Open Sans',sans-serif;
-$Socialico: 'Socialico', sans-serif;
-@font-face {
-  font-family:"Socialico";
-  src:url("../fonts/Socialico.eot?") format("eot"),
-  url("../fonts/Socialico.woff") format("woff"),
-  url("../fonts/Socialico.ttf") format("truetype"),
-  url("../fonts/Socialico.svg#Socialico") format("svg");
-  font-weight:normal;font-style:normal;
-}
-
-// типографика
-// @include font-type($color, $font-family, $font-size, $font-weight, $line-height, $letter-spacing)
-// @include font-type($color-text-dark, $Arial, 14px, 400, normal, normal);
-
-// RESPONSIVE - Bootstrap sizes
-// @include respond-to(lg) { background: orange; };
-// @include respond-to(md) { background: green; };
-// @include respond-to(sm) { background: blue; };
-// @include respond-to(xs) { background: yellow; };
-// @include respond-to(mb) { background: black; };
-// @include respond-to(mobile) { background: red; };
+$FontAwesome: 'FontAwesome', sans-serif;
 
 //colors
 $white: #FFFFFF;
@@ -51,163 +31,171 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 
 @import "animation";
 
+// animation hover
+$speed_hover: 0.2s;
 
 // COMMON
-//a {
-//	color: $color_text_link;
-  //text-decoration: none;
-	//&:hover {text-decoration: none;}
-//	&:active {}
-//}
-//p {margin-bottom: 10px;}
+
 
 // separator
-.separator {
+  .separator {
     width: 50%; margin: 0 auto;
     border-bottom: 1px solid $color_text_dark;
 }
 
 // application
 .app {
-    @include font-type($color_text_dark, $OpenSans, 17px, 400, 26px, normal);
+  @include font-type($color_text_dark, $OpenSans, 17px, 400, 26px, normal);
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
 
-    margin: 0 auto;
-    padding: 0 ;
-    position: relative;
-    a{
-      @include font-type($color_text_dark, $OpenSans, 16px, 400, normal, normal);
-    }
+  @include respond-to( mb) {
+    @include font-type($color_text_dark, $OpenSans, 12px, 400, 26px, normal);
+  }
 
-  @include respond-to(mb) {
-    text-align: center;
+  a {
+    text-decoration: none;
+    @include font-type($color_text_dark, $OpenSans, 16px, 400, normal, normal);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  *:focus {
+    outline: none;
   }
 }
 
 // header
 .header {
+  padding: 35px 0;
   background-color: $color_bg_dark;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     text-align: center;
   }
 
   &__logo {
-    margin: 49px 0;
-
-    @media only screen and (max-width: 767px) {
-      margin: 49px 0 0 0;
+    margin: 10px 0;
+    img {
     }
-    img {}
-    h1 {}
+    h1 {
+    }
   }
   &__nav {
-    margin: 49px 0 0 0px;
-
-    @media only screen and (max-width: 767px) {
-      margin: 20px 0 0 0px;
-    }
-
+    margin: 14px 0;
     ul {
-        li {
+      li {
         display: inline-block;
         margin: 0 19px;
+        a {
+          transition: color $speed_hover;
+          @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
 
-          @media only screen and (max-width: 767px) {
-            padding: 0px 0 0 0px;
+          @media only screen and (max-width: 768px) {
+            @include font-type($color_text_light, $OpenSans, 12px, 400, normal, normal);
+          }
+          @include respond-to( mb) {
+            @include font-type($color_text_light, $OpenSans, 10px, 400, normal, normal);
           }
 
-        a {
-          @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
+        }
+        a:hover {
+          color: $color_text_dark;
         }
       }
     }
   }
-  &__social{
-
+  &__social {
     ul {
       display: flex;
       justify-content: flex-end;
-      margin: 39px 33px 0 0px;
+      margin: 10px 33px 10px 33px;
 
       @media only screen and (max-width: 767px) {
         justify-content: center;
-        margin: 20px 0 39px 0px;
       }
 
       li {
-        display: flex;
-        padding: 10px;
+        margin: 0 10px;
         a {
-          @include font-type($color_text_title, $Socialico, 22px, 400, normal, normal);
-          background-color: $white;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          padding: 4px 0;
-          text-align: center;
+          transition: color $speed_hover;
+          .fa-circle {
+            transition: color $speed_hover;
+          }
+        }
+        &:hover {
+          a {
+            color: $color_text_light;
+            .fa-circle {
+              color: $color_text_dark;
+            }
+          }
         }
       }
     }
   }
 }
-
 .billboard {
-  //height: 560px;
   background-image: url(../img/billboard.jpg);
   background-size: cover;
-  background-position: center center;
-
-
-  @include respond-to(md) {
-    height: auto;
-
-  }
-
   &__box {
-    padding-left: 141px;
-    padding-bottom: 178px;
+    padding: 178px 0 178px 141px;
 
-    @include respond-to(lg) {
-      padding-left: 100px;
-    }
-    @include respond-to(md) {
-      padding-left: 60px;
-    }
-    @media only screen and (max-width: 991px) {
-      padding-left: 40px;
+    @include respond-to(sm) {
+      padding: 138px 0 138px 100px;
+      background-position: center right;
     }
     @include respond-to(xs) {
-      padding-bottom: 78px;
+      padding: 98px 0 98px 60px;
+      background-position: left top;
+     // background-size: 100%;
+    }
+    @include respond-to(mb) {
+      padding: 38px 0 38px 40px;
+      background-position: left top;
     }
   }
-
   &__title{
+    @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
     text-transform: uppercase;
 
-    @include font-type($color_text_dark, $OpenSans, 32px, 700, normal, 0px);
-    margin-top: 163px;
-
-    @media only screen and (max-width: 767px) {
-      margin-top: 63px;
+    @include respond-to( mb) {
+      @include font-type($color_text_dark, $OpenSans, 18px, 700,44px, 3px);
     }
 
   }
   &__content{
     margin-top: 27px;
   }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__button{
     margin: 32px 7px 0 0;
     width: 225px;
     height: 60px;
     border: 2px solid $color_text_dark;
-    display: inline-block;
+    transition-property: color, background-color;
+    transition-duration: $speed_hover;
+    &:hover {
+      color: $color_text_light;
+      background-color: $color_text_dark;
+    }
     i {
       margin-right: 15px;
     }
     a {
+      transition: color $speed_hover;
       display: block;
-      padding: 15px 30px;
+      padding: 15px 25px;
       @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
+    }
+    a:hover {
+      color: $color_text_light;
     }
   }
 }
@@ -220,7 +208,6 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin: 31px 0 15px 0;
     }
     &_item {
 
@@ -229,7 +216,18 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
       }
 
       a {
-        img {}
+        img {
+          margin: 31px 0 15px 0;
+          display: inline-block;
+          vertical-align: middle;
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          transition-duration: 0.3s;
+          transition-property: transform;
+        }
+        img:hover {
+          transform: scale(0.9);
+        }
       }
     }
   }
@@ -238,12 +236,15 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 .about {
   padding: 0 0 105px 0;
   background-color: $color_bg_light;
-  &__iphone {
-    margin: 89px 132px 0px 0px;
-    float: right;
 
+  @include respond-to(xs){
+    padding: 0 0 105px 20px;
+  }
+  &__iphone {
+    margin: 89px 132px 0 0;
+    float: right;
     @include respond-to (sm){
-      margin: 89px 0px 0px 0px;
+      margin-top: 89px;
       float: none;
     }
     @include respond-to(xs){
@@ -254,15 +255,16 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
   }
   &__title {
     text-transform: uppercase;
-
     margin-top: 92px;
     @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
 
+    @include respond-to(mb) {
+      @include font-type($color_text_dark, $OpenSans, 18px, 700,44px, 3px);
+    }
   }
   &__content {
     margin-top: 21px;
     @include font-type($color_text_dark, $OpenSans, 17px, 400, 31px, normal);
-
   }
   &__list {
     margin-top: 50px;
@@ -270,8 +272,15 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
   &__item {
     margin-top: 18px;
     h5 {
+      display: flex;
+      flex-wrap: nowrap;
       .icon {
         margin-right: 25px;
+      }
+      .icon-videoсam{
+        width: 24px;
+      }
+      p{
       }
     }
   }
@@ -280,18 +289,47 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     width: 262px;
     height: 60px;
     border: 2px solid $color_text_dark;
+    padding: 18px 40px 0 40px;
     display: inline-block;
-    @include font-type($color_text_dark, $OpenSans, 18px, 600, normal, normal);
+    @include font-type($color_text_dark, $OpenSans, 16px, 600, normal, normal);
+    transition-property: color, background-color;
+    transition-duration: $speed_hover;
+    &:hover {
+      color: $color_text_light;
+      background-color: $color_text_dark;
+    }
     .icon {
       margin-right: 15px;
     }
-    padding: 20px 40px 0 40px;
-
+  }
+  &__video {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    .video{
+      padding: 5%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .videoClosed {
+      margin: 5%;
+      padding: 1%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   &__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
-
+    transition: color $speed_hover;
+    &:hover {
+      color: rgba(110, 108,108, 0.5);
+    }
   }
 }
 
@@ -299,12 +337,10 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
   background-color: $color_bg_dark;
   padding: 69px 0 50px 0;
   &__item {
-    /*margin-top: 100px;*/
     text-align: center;
     padding: 0 40px;
     i {
       margin-top: 29px;
-
     }
     h3 {
       margin-top: 40px;
@@ -320,7 +356,7 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
 .testimonials {
   &__box{
     text-align: center;
-    margin-top: 57px
+    margin: 57px 0 96px 0;
   }
   &__text {
     display: inline-block;
@@ -328,6 +364,11 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     margin-top: 29px;
     @include font-type($color_text_dark, $OpenSans, 22px, 400, 36px, normal);
     text-align: center;
+
+    @include respond-to( mb) {
+      @include font-type($color_text_dark, $OpenSans, 14px, 400, 36px, normal);
+    }
+
   }
   &__author--name {
     margin-top: 30px;
@@ -335,32 +376,35 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     @include font-type($color_text_dark, $OpenSans, 20px, 600, normal, normal);
   }
   &__author--title {
-    margin-top: 1px;
     text-align: center;
     @include font-type($color_text_dark, $OpenSans, 14px, 400, normal, normal);
+    margin: 0 0 38px 0;
   }
-  &__navigation {
-    margin: 38px 0 96px 0;
-    display: flex;
-    justify-content: center;
-    a {
-      margin:0 20px;
-      padding: 0 0px;
-      i {}
+
+  .icon-arr_l {
+    margin: 0 20px;
+  }
+  .icon-arr_r {
+    margin: 0 20px;
+  }
+  .icon-nav {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    &:hover {
+      transform: scale(0.9);
     }
   }
 }
-
 .subscription {
   background-color: $color_bg_dark;
-
   p {
     margin-top: 94px;
     text-align: center;
     @include font-type($color_text_light, $OpenSans,20px, 400, normal, normal);
   }
   form{
-
   }
   &__form{
     margin: 52px 0 96px;
@@ -381,22 +425,37 @@ $gradient: linear-gradient(245deg, transparent 60px, $yellow);
     height: 50px;
     padding: 12px 18px;
     background-color: $color_bg_light;
-    input{
+    transition-property: opacity;
+    transition-duration: $speed_hover;
+    transition-timing-function: linear;
+    input {
       background-color: $color_bg_light;
       border: none;
+    }
+    &:hover {
+      opacity: 0.5;
     }
   }
 }
 
 .footer {
   &__list {
-    margin: 101px auto 0 auto;
+    margin: 0 auto 0 auto;
     display: flex;
     justify-content: space-between;
     width: 250px;
   }
   &__item {
-
+    transition: margin $speed_hover;
+    img {
+      margin: 101px 0 0 0;
+      transition-property: margin, padding;
+      transition-duration: $speed_hover;
+    }
+    img:hover {
+      margin: 81px 0 0 0;
+      padding: 0 0 20px 0;
+    }
   }
   &__copyright {
     margin: 50px 0 50px 0;

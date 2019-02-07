@@ -27,9 +27,6 @@
 		}
 	}
 }
-
-
-
 // Подключаем локальный шрифты из Миксина
 
 // @include font-face(Rockwell Std Light, 'RockwellStdLight_38432');
@@ -48,21 +45,17 @@
 }
 
 // fontAwesome
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-.fa {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+//@font-face {
+//	font-family: 'FontAwesome';
+//	src: url('../fonts/fa-regular-400.eot');
+//	src: url('../fonts/fa-regular-400.woff2') format('woff2'),
+//	url('../fonts/fa-regular-400.woff') format('woff'),
+//	url('../fonts/fa-regular-400.ttf') format('truetype'),
+//	url('../fonts/fa-regular-400.svg') format('svg');
+//	font-weight: normal;
+//	font-style: normal;
+//}
+
 
 
 //adaptive
@@ -71,10 +64,10 @@
 		@media only screen and (max-width: 576px) { @content; }
 	}
 	@else if $media == xs {
-		@media only screen and (max-width: 767px) { @content; }
+		@media only screen and (max-width: 750px) { @content; }
 	}
 	@else if $media == sm {
-		@media only screen and (max-width: 991px) { @content; }
+		@media only screen and (max-width: 970px) { @content; }
 	}
 	@else if $media == md {
 		@media only screen and (max-width: 1100px) { @content; }

@@ -36,3 +36,25 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
 mail($admin_email, adopt($form_subject), $message, $headers );
+
+
+   $(".send").submit(function() {
+      var th = $(this);
+      $.ajax({
+           type: "POST",
+           url: "../php/mail.php",
+           data: th.serialize(),
+           success: function(json) {
+              th.hide();
+               $(".jsFormPopup + .success").fadeIn();
+                   setTimeout(function() {
+                   th.trigger("reset");
+               }, 1000);
+           },
+           error: function(json) {
+               console.log('error', json);
+           },
+       });
+       return false;
+   });
+ });

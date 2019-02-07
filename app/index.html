@@ -13,13 +13,10 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
-
-	<!-- <link rel="stylesheet" href="css/libs.min.css?v=1.0"> -->
+	<link rel="stylesheet" href="css/libs.min.css?v=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css?v=1.0">
 	<link rel="stylesheet" href="css/main.min.css?v=1.0">
-
 
 	<title>Title</title>
 </head>
@@ -38,27 +35,43 @@
 
 		<header class="header" id="header">
 			<div class = "container" >
-				<div class="row align-items-center">
-					<div class="col-sm-2">
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
 						<div class="header__logo">
-							<img src="/img/logo.png"/>
+							<img src="img/logo.png"/>
 						</div>
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-6 col-xs-12">
 						<nav class="header__nav">
 							<ul>
-								<li><a href="">About</a></li>
-								<li><a href="">Features</a></li>
-								<li><a href="">Testimonials</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#features">Features</a></li>
+								<li><a href="#testimonials">Testimonials</a></li>
 							</ul>
 						</nav>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-4 col-xs-12">
 						<div class="header__social">
 							<ul class="header__social__list">
-								<li class="header__social__item"><a href="">F</a></li>
-								<li class="header__social__item"><a href="">L</a></li>
-								<li class="header__social__item"><a href="">G</a></li>
+								<li class="header__social__item">
+									<a href="" class="fa-stack">
+										<!--<i class="fab fa-facebook-f"></i>-->
+										<i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+										<i class="fab fa-facebook-f fa-stack-1x "></i>
+									</a>
+								</li>
+								<li class="header__social__item">
+									<a href="" class="fa-stack">
+										<i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+										<i class="fab fa-twitter fa-stack-1x"></i>
+									</a>
+								</li>
+								<li class="header__social__item ">
+									<a href="" class="fa-stack">
+										<i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+										<i class="fab fa-google fa-stack-1x "></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -67,11 +80,10 @@
 		</header>
 
 		<section class="billboard" id="billboard">
-			<!-- BILBOARD -->
+			<!-- BILLBOARD -->
 			<div class = "container" >
 			    <div class="row">
-			
-			        <div class="col-sm-7">
+			        <div class=".col-lg-7 col-md-8 col-sm-11 col-xs-12">
 			            <div class="billboard__box">
 			                <h2 class="billboard__title">
 			                    take photo like a pro.
@@ -79,11 +91,13 @@
 			                <p class="billboard__content">
 			                    Whit only your iphone and capture app you can take stunning image loke a professional Phorographer.
 			                </p>
-			                <div class="billboard__button billboard__button--iphone">
-			                    <a href=""><i class="icon icon-apple"></i>IPHONE APP</a>
-			                </div>
-			                <div class="billboard__button billboard__button--android">
-			                    <a href=""><i class="icon icon-android"></i> ANDROID APP</a>
+			                <div class="billboard__buttons">
+			                    <div class="billboard__button billboard__button--iphone ">
+			                        <a href=""><i class="icon icon-apple"></i>IPHONE APP</a>
+			                    </div>
+			                    <div class="billboard__button billboard__button--android " >
+			                        <a href=""><i class="icon icon-android"></i> ANDROID APP</a>
+			                    </div>
 			                </div>
 			            </div>
 			        </div>
@@ -97,23 +111,23 @@
 			        <div class="col-sm-12" >
 			            <ul class="featured__campany_list">
 			                <li  class="featured__campany_item">
-			                    <a href="" >
-			                        <img src="../img/google.png" alt="google full logo">
+			                    <a href="img/google.png" data-fancybox="gallery" data-caption="" data-animation-effect="false">
+			                        <img src="img/google.png" alt="google full logo"  >
 			                    </a>
 			                </li>
 			                <li class="featured__campany_item">
-			                    <a href="" >
-			                        <img src="../img/facebook.png" alt="facebook full logo">
+			                    <a href="img/facebook.png" data-fancybox="gallery" data-caption="">
+			                        <img src="img/facebook.png" alt="facebook full logo">
 			                    </a>
 			                </li>
 			                <li class="featured__campany_item">
-			                    <a href="" >
-			                        <img src="../img/yahoo.png" alt="yahoo full logo">
+			                    <a href="img/yahoo.png" data-fancybox="gallery" data-caption="">
+			                        <img src="img/yahoo.png" alt="yahoo full logo" >
 			                    </a>
 			                </li>
 			                <li class="featured__campany_item">
-			                    <a href="" >
-			                        <img src="../img/paypal.png" alt="paypal full logo">
+			                    <a href="img/paypal.png" data-fancybox="gallery" data-caption=" ">
+			                        <img src="img/paypal.png" alt="paypal full logo">
 			                    </a>
 			                </li>
 			
@@ -126,8 +140,10 @@
 			<!-- ABOUT -->
 			<div class = "container" >
 			    <div class="row ">
-			        <div class="col-sm-6" >
-			            <img class="about__iphone" src="/img/iph.png">
+			        <div class="col-sm-6 " >
+			            <div class="wow pulse" data-wow-duration="2s" data-wow-delay="1s">
+			                <img class="about__iphone " src="img/iph.png" alt="Iphone">
+			            </div>
 			        </div>
 			        <div class="col-sm-6">
 			            <h2 class="about__title">
@@ -146,7 +162,7 @@
 			                <li class="about__item">
 			                    <h5>
 			                        <i class="icon icon-videoсam"></i>
-			                        Morbi non effesmgs nibsh sit amet est eros.
+			                        <p>Morbi non effesmgs nibsh sit amet est eros.</p>
 			                    </h5>
 			                </li>
 			                <li class="about__item">
@@ -168,13 +184,17 @@
 			                    </h5>
 			                </li>
 			            </ul>
-			            <a href="" class="about__button">
+			            <a href="" class="about__button" id="about__button">
 			                <i class="icon icon-play"></i>
 			                WATCH THE VIDEO
 			            </a>
 			            <a href="" class="about__link">
 			                get the app
 			            </a>
+			            <div class="about__video" id ="about__video">
+			                <iframe class="video" src="https://www.youtube.com/embed/5uTK6ypfNdU"  allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+			                <div class="videoClosed "> <i class="icon icon-close-cross"></i></div>
+			            </div>
 			        </div>
 			    </div>
 			</div>
@@ -183,7 +203,7 @@
 			<!-- FEATURES features-->
 			<div class = "container" >
 			    <div class="row ">
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-people_white"></i>
 			                <h3>
@@ -196,7 +216,7 @@
 			                </p>
 			            </div>
 			        </div>
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-painting_white"></i>
 			                <h3>
@@ -209,7 +229,7 @@
 			                </p>
 			            </div>
 			        </div>
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-mail_white"></i>
 			                <h3>
@@ -222,9 +242,7 @@
 			                </p>
 			            </div>
 			        </div>
-			    </div>
-			    <div class="row ">
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-dialog_white"></i>
 			                <h3>
@@ -237,7 +255,7 @@
 			                </p>
 			            </div>
 			        </div>
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-settings_white"></i>
 			                <h3>
@@ -250,7 +268,7 @@
 			                </p>
 			            </div>
 			        </div>
-			        <div class="col-sm-4">
+			        <div class="col-sm-6 col-md-4">
 			            <div class="features__item">
 			                <i class="icon icon-printer_white"></i>
 			                <h3>
@@ -266,37 +284,51 @@
 			    </div>
 			</div>
 		</section>
-		<section class="testimonials" id="testimonialsd">
+		<section class="testimonials" id="testimonials">
 			<!--testimonials-->
 			<div class = "container" >
 			    <div class="row ">
 			
 			        <div class="col-sm-12">
-			            <div class="testimonials__box">
-			                 <p class="testimonials__text">
-			                     Integer pharetra tellus varius, dictum erat vel, maximus tellus.
-			                     Their work on our website and Internet marketing has made a significant
-			                     different to our business. We’ve seen a 425% increase in quote requests
-			                     from the website which has been pretty remarkable –
-			                     but I’d always like to see more!
-			                 </p>
-			                <h4 class="testimonials__author--name">
-			                    John Doer
-			                </h4>
-			                <p class="testimonials__author--title">
-			                    app develope
-			                </p>
-			                <div class="testimonials__navigation">
-			                    <a  href="" class="testimonials__navigation--left">
-			                        <i class="icon icon-arr_l"></i>
-			                    </a>
-			                    <a  href="" >
-			                        <i class="icon icon-arr_r testimonials__navigation--right"></i>
-			                    </a>
+			            <div class="testimonials__box ">
+			                <div class="owl-carousel  owl-loaded">
+			                    <div class="owl-stage-outer">
+			                        <div class="owl-stage">
+			                             <div class="owl-item">
+			                                 <p class="testimonials__text">
+			                                 Integer pharetra tellus varius, dictum erat vel, maximus tellus.
+			                                 Their work on our website and Internet marketing has made a significant
+			                                 different to our business. We’ve seen a 425% increase in quote requests
+			                                 from the website which has been pretty remarkable –
+			                                 but I’d always like to see more!
+			                                </p>
+			                                <h4 class="testimonials__author--name">
+			                                    John Doer
+			                                </h4>
+			                                <p class="testimonials__author--title">
+			                                    app develope
+			                                </p>
+			                             </div>
+			                            <div class="owl-item">
+			                                <p class="testimonials__text">
+			                                    Integer pharetra tellus varius, dictum erat vel, maximus tellus.
+			                                    Their work on our website and Internet marketing has made a significant
+			                                    different to our business. We’ve seen a 425% increase in quote requests
+			                                    from the website which has been pretty remarkable –
+			                                    but I’d always like to see more!
+			                                </p>
+			                                <h4 class="testimonials__author--name">
+			                                    John Doer
+			                                </h4>
+			                                <p class="testimonials__author--title">
+			                                    app develope
+			                                </p>
+			                            </div>
+			                        </div>
+			                    </div>
 			                </div>
 			            </div>
 			        </div>
-			
 			    </div>
 			</div>
 		</section>
@@ -309,9 +341,9 @@
 			                Join Our Liste and stay updated!
 			            </p>
 			            <form action="/sendEmail" method="POST">
-			                <div class="subscription__form">
+			                <div class="subscription__form wow bounceInUp">
 			                    <input class="subscription__email" name="email-address" placeholder="Enter your email">
-			                    <div class="subscription__button">
+			                    <div class="subscription__button send">
 			                        <input class=" icon icon-mail_dark" type="submit" name="submit" value="">
 			                    </div>
 			                </div>
@@ -329,17 +361,17 @@
 			            <ul class="footer__list">
 			                <li>
 			                    <a href="" class="footer__item" >
-			                        <img src="../img/android.png" alt="android robot logo">
+			                        <img src="img/android.png" alt="android robot logo">
 			                    </a>
 			                </li>
 			                <li>
 			                    <a href="" class="footer__item">
-			                        <img src="../img/apple.png" alt="apple logo">
+			                        <img src="img/apple.png" alt="apple logo">
 			                    </a>
 			                </li>
 			                <li>
 			                    <a href="" class="footer__item">
-			                        <img src="../img/windows.png" alt="windows logo">
+			                        <img src="img/windows.png" alt="windows logo">
 			                    </a>
 			                </li>
 			            </ul>
@@ -352,9 +384,11 @@
 		</footer>
 
 	</div>
-
 	<!-- JS -->
+	<script src="js/fontawesome.min.js"></script>
 	<script src="js/libs.min.js?v=1.0"></script>
 	<script src="js/main.min.js?v=1.0"></script>
+
+
 </body>
 </html>
