@@ -221,6 +221,28 @@ body * {
   .app *:focus {
     outline: none; }
 
+.about__video {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; }
+
+.video {
+  padding: 10%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.videoClosed {
+  padding: 10%;
+  position: absolute;
+  right: -25px;
+  top: -25px; }
+  .videoClosed .icon {
+    cursor: pointer; }
+
 .header {
   padding: 35px 0;
   background-color: #3b9e69; }
@@ -233,8 +255,9 @@ body * {
     margin: 14px 0; }
     .header__nav ul li {
       display: inline-block;
-      margin: 0 19px; }
+      margin: 0 12px; }
       .header__nav ul li a {
+        padding: 10px;
         -webkit-transition: color 0.2s;
         transition: color 0.2s;
         color: #FFFFFF;
@@ -243,22 +266,6 @@ body * {
         font-weight: 400;
         line-height: normal;
         letter-spacing: normal; }
-        @media only screen and (max-width: 768px) {
-          .header__nav ul li a {
-            color: #FFFFFF;
-            font-family: "Open Sans", sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: normal; } }
-        @media only screen and (max-width: 576px) {
-          .header__nav ul li a {
-            color: #FFFFFF;
-            font-family: "Open Sans", sans-serif;
-            font-size: 10px;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: normal; } }
       .header__nav ul li a:hover {
         color: #6e6c6c; }
   .header__social ul {
@@ -301,18 +308,18 @@ body * {
         background-position: center right; } }
     @media only screen and (max-width: 750px) {
       .billboard__box {
-        padding: 98px 0 98px 60px;
+        padding: 98px 60px 98px 60px;
         background-position: left top; } }
     @media only screen and (max-width: 576px) {
       .billboard__box {
-        padding: 38px 0 38px 40px;
+        padding: 38px 40px 38px 40px;
         background-position: left top; } }
   .billboard__title {
     color: #6e6c6c;
     font-family: "Open Sans", sans-serif;
     font-size: 32px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 32px;
     letter-spacing: 3px;
     text-transform: uppercase; }
     @media only screen and (max-width: 576px) {
@@ -321,7 +328,7 @@ body * {
         font-family: "Open Sans", sans-serif;
         font-size: 18px;
         font-weight: 700;
-        line-height: 44px;
+        line-height: 24px;
         letter-spacing: 3px; } }
   .billboard__content {
     margin-top: 27px; }
@@ -351,7 +358,7 @@ body * {
       -webkit-transition: color 0.2s;
       transition: color 0.2s;
       display: block;
-      padding: 15px 25px;
+      padding: 15px 18px;
       color: #6e6c6c;
       font-family: "Open Sans", sans-serif;
       font-size: 18px;
@@ -401,7 +408,7 @@ body * {
   background-color: #faf9f9; }
   @media only screen and (max-width: 750px) {
     .about {
-      padding: 0 0 105px 20px; } }
+      padding: 0 20px 105px 20px; } }
   .about__iphone {
     margin: 89px 132px 0 0;
     float: right; }
@@ -421,7 +428,7 @@ body * {
     font-family: "Open Sans", sans-serif;
     font-size: 32px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 32px;
     letter-spacing: 3px; }
     @media only screen and (max-width: 576px) {
       .about__title {
@@ -429,7 +436,7 @@ body * {
         font-family: "Open Sans", sans-serif;
         font-size: 18px;
         font-weight: 700;
-        line-height: 44px;
+        line-height: 24px;
         letter-spacing: 3px; } }
   .about__content {
     margin-top: 21px;
@@ -455,6 +462,8 @@ body * {
         margin-right: 25px; }
       .about__item h5 .icon-videoсam {
         width: 24px; }
+      .about__item h5 .icon-location {
+        margin: 0 27px 0 3px; }
   .about__button {
     margin-top: 51px;
     width: 262px;
@@ -477,24 +486,6 @@ body * {
       background-color: #6e6c6c; }
     .about__button .icon {
       margin-right: 15px; }
-  .about__video {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; }
-    .about__video .video {
-      padding: 5%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%; }
-    .about__video .videoClosed {
-      margin: 5%;
-      padding: 1%;
-      position: absolute;
-      top: 0;
-      right: 0; }
   .about__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
@@ -621,8 +612,15 @@ body * {
     width: 310px;
     height: 50px;
     border: none;
-    background-color: #faf9f9; }
+    background-color: #faf9f9;
+    color: #6e6c6c;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal; }
   .subscription__button {
+    cursor: pointer;
     display: block;
     width: 60px;
     height: 50px;
@@ -636,7 +634,8 @@ body * {
     transition-timing-function: linear; }
     .subscription__button input {
       background-color: #faf9f9;
-      border: none; }
+      border: none;
+      cursor: pointer; }
     .subscription__button:hover {
       opacity: 0.5; }
 
