@@ -66,6 +66,30 @@ $speed_hover: 0.2s;
   *:focus {
     outline: none;
   }
+
+}
+.about__video{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.video{
+  padding: 10%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.videoClosed {
+  padding: 10%;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  .icon {
+    cursor: pointer;
+  }
 }
 
 // header
@@ -89,18 +113,11 @@ $speed_hover: 0.2s;
     ul {
       li {
         display: inline-block;
-        margin: 0 19px;
+        margin: 0 12px;
         a {
+          padding: 10px;
           transition: color $speed_hover;
           @include font-type($color_text_light, $OpenSans, 16px, 400, normal, normal);
-
-          @media only screen and (max-width: 768px) {
-            @include font-type($color_text_light, $OpenSans, 12px, 400, normal, normal);
-          }
-          @include respond-to( mb) {
-            @include font-type($color_text_light, $OpenSans, 10px, 400, normal, normal);
-          }
-
         }
         a:hover {
           color: $color_text_dark;
@@ -149,21 +166,21 @@ $speed_hover: 0.2s;
       background-position: center right;
     }
     @include respond-to(xs) {
-      padding: 98px 0 98px 60px;
+      padding: 98px 60px 98px 60px;
       background-position: left top;
      // background-size: 100%;
     }
     @include respond-to(mb) {
-      padding: 38px 0 38px 40px;
+      padding: 38px 40px 38px 40px;
       background-position: left top;
     }
   }
   &__title{
-    @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
+    @include font-type($color_text_dark, $OpenSans, 32px, 700,32px, 3px);
     text-transform: uppercase;
 
     @include respond-to( mb) {
-      @include font-type($color_text_dark, $OpenSans, 18px, 700,44px, 3px);
+      @include font-type($color_text_dark, $OpenSans, 18px, 700,24px, 3px);
     }
 
   }
@@ -191,7 +208,7 @@ $speed_hover: 0.2s;
     a {
       transition: color $speed_hover;
       display: block;
-      padding: 15px 25px;
+      padding: 15px 18px;
       @include font-type($color_text_dark, $OpenSans, 18px, 700, normal, normal);
     }
     a:hover {
@@ -238,7 +255,7 @@ $speed_hover: 0.2s;
   background-color: $color_bg_light;
 
   @include respond-to(xs){
-    padding: 0 0 105px 20px;
+    padding: 0 20px 105px 20px;
   }
   &__iphone {
     margin: 89px 132px 0 0;
@@ -256,10 +273,10 @@ $speed_hover: 0.2s;
   &__title {
     text-transform: uppercase;
     margin-top: 92px;
-    @include font-type($color_text_dark, $OpenSans, 32px, 700,44px, 3px);
+    @include font-type($color_text_dark, $OpenSans, 32px, 700,32px, 3px);
 
     @include respond-to(mb) {
-      @include font-type($color_text_dark, $OpenSans, 18px, 700,44px, 3px);
+      @include font-type($color_text_dark, $OpenSans, 18px, 700,24px, 3px);
     }
   }
   &__content {
@@ -279,6 +296,9 @@ $speed_hover: 0.2s;
       }
       .icon-videoсam{
         width: 24px;
+      }
+      .icon-location{
+        margin: 0 27px 0 3px;
       }
       p{
       }
@@ -302,27 +322,7 @@ $speed_hover: 0.2s;
       margin-right: 15px;
     }
   }
-  &__video {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    .video{
-      padding: 5%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .videoClosed {
-      margin: 5%;
-      padding: 1%;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
+
   &__link {
     display: inline-block;
     padding: 22px 34px 0 34px;
@@ -418,8 +418,10 @@ $speed_hover: 0.2s;
     height: 50px;
     border: none;
     background-color: $color_bg_light;
+    @include font-type($color_text_dark, $OpenSans,18px, 400, normal, normal);
   }
   &__button {
+    cursor: pointer;
     display: block;
     width: 60px;
     height: 50px;
@@ -430,7 +432,9 @@ $speed_hover: 0.2s;
     transition-timing-function: linear;
     input {
       background-color: $color_bg_light;
+
       border: none;
+      cursor: pointer;
     }
     &:hover {
       opacity: 0.5;
